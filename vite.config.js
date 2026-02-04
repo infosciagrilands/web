@@ -1,9 +1,8 @@
 import { defineConfig } from 'vite'
 
 export default defineConfig({
-    // GitHub Pagesでデプロイする場合、リポジトリ名を /リポジトリ名/ の形式で指定します
-    // 例: https://username.github.io/lab_website/ の場合は '/lab_website/'
-    base: './',
+    // GitHub Pagesのリポジトリ名に合わせてパスを設定します
+    base: '/info-sci-agri-togo-test-2026-02/',
     build: {
         outDir: 'dist',
     }
