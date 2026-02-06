@@ -91,12 +91,127 @@ function closeModal() {
   }, 300);
 }
 
+// Initial binding for static cards (members, etc.)
 researchCards.forEach(card => {
   card.addEventListener('click', () => {
     const targetId = card.getAttribute('data-target');
     openModal(targetId);
   });
 });
+
+// --- Dynamic Research Themes Logic ---
+const researchThemes = [
+  {
+    id: 'research-modal-1',
+    title: 'イネ遺伝解析・QTL探索',
+    desc: '多様な遺伝資源と統計手法を用いた、次世代のイネ育種基盤の開発。',
+    img: './original/gallery/gallery2.png'
+  },
+  {
+    id: 'research-modal-2',
+    title: 'イネNAM集団の構築',
+    desc: '複雑な農業形質の遺伝背景を解明する、大規模かつ精密な集団解析。',
+    img: './original/hero.jpg'
+  },
+  {
+    id: 'research-modal-3',
+    title: 'スマート農業・センシング',
+    desc: 'ドローンやICTを用いた、環境と植物生体情報のリアルタイム計測。',
+    img: './original/research4.jpg'
+  },
+  {
+    id: 'research-modal-4',
+    title: '土壌原生生物の機能',
+    desc: '土壌生態系のキーストーン「捕食性原生生物」の多様性と役割。',
+    img: './original/research2.png'
+  },
+  {
+    id: 'research-modal-5',
+    title: '根圏微生物食物連鎖',
+    desc: 'イネの遺伝型が支配する、根圏微生物コミュニティの構造と機能。',
+    img: './original/research3.png'
+  },
+  {
+    id: 'research-modal-6',
+    title: 'データ駆動型作物モデル',
+    desc: 'センシングデータと生育シミュレーションの融合による予測技術。',
+    img: './original/research5.png'
+  },
+  {
+    id: 'research-modal-7',
+    title: '水田土壌の物質循環',
+    desc: '酸化還元境界層における微生物動態と温室効果ガス代謝の解明。',
+    img: './original/gallery/gallery4.png'
+  }
+];
+
+const researchGrid = document.getElementById('research-grid');
+const expandBtn = document.getElementById('research-expand-btn');
+let isExpanded = false;
+let shuffleInterval;
+
+function createCardHTML(theme) {
+  return `
+    <div class="card research-card reveal active" data-target="${theme.id}" style="animation: fadeInUp 0.5s ease;">
+      <div class="research-img-box">
+        <img src="${theme.img}" alt="${theme.title}">
+      </div>
+      <h3>${theme.title}</h3>
+      <p>${theme.desc}</p>
+    </div>
+  `;
+}
+
+function renderThemes(indices) {
+  if (!researchGrid) return;
+  researchGrid.innerHTML = indices.map(i => createCardHTML(researchThemes[i])).join('');
+  // Re-bind click events for new cards
+  document.querySelectorAll('#research-grid .research-card').forEach(card => {
+    card.addEventListener('click', () => {
+      openModal(card.getAttribute('data-target'));
+    });
+  });
+}
+
+function startShuffle() {
+  // Initial render
+  let currentIndices = [0, 1, 2];
+  renderThemes(currentIndices);
+
+  if (shuffleInterval) clearInterval(shuffleInterval);
+  shuffleInterval = setInterval(() => {
+    if (isExpanded) return;
+
+    // Pick 3 random unique indices
+    const newIndices = [];
+    while (newIndices.length < 3) {
+      const r = Math.floor(Math.random() * researchThemes.length);
+      if (newIndices.indexOf(r) === -1) newIndices.push(r);
+    }
+
+    renderThemes(newIndices);
+  }, 5000);
+}
+
+if (researchGrid && expandBtn) {
+  startShuffle();
+
+  expandBtn.addEventListener('click', () => {
+    isExpanded = !isExpanded;
+    if (isExpanded) {
+      clearInterval(shuffleInterval);
+      renderThemes([0, 1, 2, 3, 4, 5, 6]); // Show all
+      expandBtn.textContent = '閉じる (Shuffleに戻る)';
+      expandBtn.style.background = 'var(--accent)';
+      expandBtn.style.color = 'white';
+    } else {
+      expandBtn.textContent = '全ての研究テーマを見る (+4)';
+      expandBtn.style.background = '';
+      expandBtn.style.color = '';
+      startShuffle();
+    }
+  });
+}
 
 modalClose.addEventListener('click', closeModal);
 

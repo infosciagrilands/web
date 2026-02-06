@@ -93,47 +93,14 @@
         <span style="font-size: 0.8rem; color: var(--text-dim);">Click to expand</span>
       </div>
       <div class="bento-body">
-        <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));">
-          <!-- Card 1: Genetics/QTL -->
-          <div class="card research-card" data-target="research-modal-1">
-            <div class="research-img-box">
-              <img src="./original/gallery/gallery2.png" alt="Genetics">
-            </div>
-            <h3>イネ遺伝解析・QTL探索</h3>
-            <p>多様な遺伝資源と統計手法を用いた、次世代のイネ育種基盤の開発。</p>
-          </div>
-          <!-- Card 2: NAM -->
-          <div class="card research-card" data-target="research-modal-2">
-            <div class="research-img-box">
-              <img src="./original/research5.png" alt="NAM">
-            </div>
-            <h3>イネNAM集団の構築</h3>
-            <p>複雑な農業形質の遺伝背景を解明する、大規模かつ精密な集団解析。</p>
-          </div>
-          <!-- Card 3: Sensing -->
-          <div class="card research-card" data-target="research-modal-3">
-            <div class="research-img-box">
-              <img src="./original/research4.jpg" alt="Sensing">
-            </div>
-            <h3>スマート農業・センシング</h3>
-            <p>ドローンやICTを用いた、環境と植物生体情報のリアルタイム計測。</p>
-          </div>
-          <!-- Card 4: Protists -->
-          <div class="card research-card" data-target="research-modal-4">
-            <div class="research-img-box">
-              <img src="./original/research2.png" alt="Protists">
-            </div>
-            <h3>土壌原生生物の機能</h3>
-            <p>土壌生態系のキーストーン「捕食性原生生物」の多様性と役割。</p>
-          </div>
-          <!-- Card 5: Rhizosphere -->
-          <div class="card research-card" data-target="research-modal-5">
-            <div class="research-img-box">
-              <img src="./original/research3.png" alt="Rhizosphere">
-            </div>
-            <h3>根圏微生物食物連鎖</h3>
-            <p>イネの遺伝型が支配する、根圏微生物コミュニティの構造と機能。</p>
-          </div>
+        <!-- Dynamic Grid Container -->
+        <div id="research-grid" class="grid"
+          style="grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); min-height: 250px;">
+          <!-- Content will be loaded by JS -->
+        </div>
+        <div style="text-align: center; margin-top: 1rem;">
+          <button id="research-expand-btn" class="profile-link-badge"
+            style="cursor: pointer; background: transparent; font-size: 0.9rem;">全ての研究テーマを見る (+4)</button>
         </div>
       </div>
     </section>
@@ -361,6 +328,30 @@
       </p>
       <p>
         特定の遺伝子を持つイネが、自分に有利な微生物を呼び寄せている可能性があります。この分子レベルからの生態系構築プロセスを解明することで、植物自体の力を引き出し、病害虫への耐性を高めたり、肥料効率を向上させたりする「微生物共生を考慮した新しいイネ育種」の可能性を拓きます。
+      </p>
+    </div>
+  </template>
+
+  <template id="research-modal-6">
+    <div class="modal-header">
+      <img src="./original/research5.png" alt="Research 6">
+      <h2>データ駆動型作物モデル開発</h2>
+    </div>
+    <div class="modal-body">
+      <p>気象、植物の生育状況、土壌成分、遺伝子情報など、多岐にわたる農業データを情報科学的なアプローチで活用します。</p>
+      <p>センシングデータに発生しがちな欠損や異常値を作物モデルで補完し、同時に実測データでモデルの精度を高めるという相補的な関係を利用して、農業の生産性向上に資するデータ駆動型の成長モデル開発を行います。</p>
+    </div>
+  </template>
+
+  <template id="research-modal-7">
+    <div class="modal-header">
+      <img src="./original/gallery/gallery4.png" alt="Research 7">
+      <h2>水田土壌表層における物質循環と微生物動態</h2>
+    </div>
+    <div class="modal-body">
+      <p>水田土壌の表層には、酸素濃度の急激な勾配（酸化還元境界層）が存在し、多様な微生物が活発に活動しています。本研究では、環境要因や人為的な管理がこの境界層の微生物動態に与える影響を調査しています。</p>
+      <p>
+        特に、メタン生成菌や鉄酸化菌などの活動と、それらが温室効果ガスの発生や抑制にどう関わっているかを明らかにします。フィールド調査から微生物の単離培養まで、マクロとミクロの視点を組み合わせて、持続可能な水田管理のための基礎的知見を蓄積しています。
       </p>
     </div>
   </template>
