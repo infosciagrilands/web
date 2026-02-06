@@ -90,37 +90,41 @@
     <section id="research-tile" class="bento-item glass reveal">
       <div class="bento-header">
         <h2>Research Themes</h2>
-        <a href="#" style="font-size: 0.8rem; color: var(--accent);">View All</a>
+        <span style="font-size: 0.8rem; color: var(--text-dim);">Click to expand</span>
       </div>
       <div class="bento-body">
         <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));">
-          <div class="card" style="padding: 1rem; background: var(--bg-subtle); border-radius: 16px;">
+          <!-- Card 1 -->
+          <div class="card research-card" data-target="research-modal-1">
             <div style="height: 100px; overflow: hidden; border-radius: 12px; margin-bottom: 0.8rem;">
               <img src="./original/research2.png" alt="Soil" style="width: 100%; height: 100%; object-fit: cover;">
             </div>
             <h3 style="font-size: 1rem; margin-bottom: 0.5rem;">土壌原生生物の多様性</h3>
-            <p style="font-size: 0.85rem;">原生動物が土壌の物質循環に与えるポテンシャルを研究。</p>
+            <p style="font-size: 0.85rem;">細菌群集を制御する「Game Changer」としての原生生物学。</p>
           </div>
-          <div class="card" style="padding: 1rem; background: var(--bg-subtle); border-radius: 16px;">
+          <!-- Card 2 -->
+          <div class="card research-card" data-target="research-modal-2">
             <div style="height: 100px; overflow: hidden; border-radius: 12px; margin-bottom: 0.8rem;">
               <img src="./original/research3.png" alt="Microbes" style="width: 100%; height: 100%; object-fit: cover;">
             </div>
             <h3 style="font-size: 1rem; margin-bottom: 0.5rem;">根圏微生物食物連鎖</h3>
-            <p style="font-size: 0.85rem;">イネの表現型が根圏微生物に与える影響を解明。</p>
+            <p style="font-size: 0.85rem;">植物の遺伝型が微生物群集に与える影響の解明。</p>
           </div>
-          <div class="card" style="padding: 1rem; background: var(--bg-subtle); border-radius: 16px;">
+          <!-- Card 3 -->
+          <div class="card research-card" data-target="research-modal-3">
             <div style="height: 100px; overflow: hidden; border-radius: 12px; margin-bottom: 0.8rem;">
               <img src="./original/research4.jpg" alt="ICT" style="width: 100%; height: 100%; object-fit: cover;">
             </div>
-            <h3 style="font-size: 1rem; margin-bottom: 0.5rem;">農業ICT・センシング</h3>
-            <p style="font-size: 0.85rem;">ドローンや衛星を用いた非破壊計測手法の開発。</p>
+            <h3 style="font-size: 1rem; margin-bottom: 0.5rem;">データ駆動型作物モデル</h3>
+            <p style="font-size: 0.85rem;">センシングデータと生育シミュレーションの融合。</p>
           </div>
-          <div class="card" style="padding: 1rem; background: var(--bg-subtle); border-radius: 16px;">
+          <!-- Card 4 -->
+          <div class="card research-card" data-target="research-modal-4">
             <div style="height: 100px; overflow: hidden; border-radius: 12px; margin-bottom: 0.8rem;">
               <img src="./original/research5.png" alt="Computing" style="width: 100%; height: 100%; object-fit: cover;">
             </div>
-            <h3 style="font-size: 1rem; margin-bottom: 0.5rem;">作物モデル構築</h3>
-            <p style="font-size: 0.85rem;">膨大なデータを用いた生育シミュレーションと予測。</p>
+            <h3 style="font-size: 1rem; margin-bottom: 0.5rem;">水田土壌の物質循環</h3>
+            <p style="font-size: 0.85rem;">酸化還元境界層における微生物動態と温室効果ガス代謝。</p>
           </div>
         </div>
       </div>
@@ -133,29 +137,46 @@
       </div>
       <div class="bento-body">
         <div style="display: flex; gap: 2rem; overflow-x: auto; padding-bottom: 1rem; scrollbar-width: thin;">
+          <!-- Professor Murase -->
           <div style="flex: 0 0 250px; text-align: center;">
             <div
               style="width: 100px; height: 100px; border-radius: 50%; margin: 0 auto 1rem; overflow: hidden; border: 3px solid var(--accent);">
               <img src="./original/murase.jpg" alt="村瀬 潤" style="width: 100%; height: 100%; object-fit: cover;">
             </div>
             <h3 style="font-size: 1.1rem; margin-bottom: 0.2rem;">村瀬 潤</h3>
-            <p style="font-size: 0.85rem; color: var(--accent);">教授 / 博士(農学)</p>
+            <p style="font-size: 0.85rem; color: var(--accent); margin-bottom: 0.5rem;">教授 / 博士(農学)</p>
+            <div style="display: flex; justify-content: center; gap: 0.5rem; font-size: 0.75rem;">
+              <a href="https://researchmap.jp/read0048563" target="_blank" class="profile-link">researchmap</a>
+              <a href="https://orcid.org/0000-0002-3932-8321" target="_blank" class="profile-link">ORCID</a>
+            </div>
           </div>
+          <!-- Assoc Prof Doi -->
           <div style="flex: 0 0 250px; text-align: center;">
             <div
-              style="width: 100px; height: 100px; border-radius: 50%; margin: 0 auto 1rem; overflow: hidden; background: var(--bg-subtle); display: flex; align-items: center; justify-content: center;">
+              style="width: 100px; height: 100px; border-radius: 50%; margin: 0 auto 1rem; overflow: hidden; background: var(--bg-subtle); display: flex; align-items: center; justify-content: center; border: 3px solid var(--glass-border);">
               <span style="font-size: 2rem; color: var(--text-dim);">KD</span>
             </div>
             <h3 style="font-size: 1.1rem; margin-bottom: 0.2rem;">土井 一行</h3>
-            <p style="font-size: 0.85rem; color: var(--accent);">准教授 / 博士(農学)</p>
+            <p style="font-size: 0.85rem; color: var(--accent); margin-bottom: 0.5rem;">准教授 / 博士(農学)</p>
+            <div style="display: flex; justify-content: center; gap: 0.5rem; font-size: 0.75rem;">
+              <a href="https://profs.provost.nagoya-u.ac.jp/html/100003859_ja.html" target="_blank"
+                class="profile-link">名大DB</a>
+              <a href="https://scholar.google.co.jp/citations?hl=ja&user=uMtSOzAAAAAJ" target="_blank"
+                class="profile-link">Scholar</a>
+            </div>
           </div>
+          <!-- Assistant Prof Nishiuchi -->
           <div style="flex: 0 0 250px; text-align: center;">
             <div
-              style="width: 100px; height: 100px; border-radius: 50%; margin: 0 auto 1rem; overflow: hidden; background: var(--bg-subtle); display: flex; align-items: center; justify-content: center;">
+              style="width: 100px; height: 100px; border-radius: 50%; margin: 0 auto 1rem; overflow: hidden; background: var(--bg-subtle); display: flex; align-items: center; justify-content: center; border: 3px solid var(--glass-border);">
               <span style="font-size: 2rem; color: var(--text-dim);">SN</span>
             </div>
             <h3 style="font-size: 1.1rem; margin-bottom: 0.2rem;">西内 俊策</h3>
-            <p style="font-size: 0.85rem; color: var(--accent);">助教 / 博士(農学)</p>
+            <p style="font-size: 0.85rem; color: var(--accent); margin-bottom: 0.5rem;">助教 / 博士(農学)</p>
+            <div style="display: flex; justify-content: center; gap: 0.5rem; font-size: 0.75rem;">
+              <a href="https://researchmap.jp/Nishiuchi_Shunsaku" target="_blank" class="profile-link">researchmap</a>
+              <a href="https://orcid.org/0000-0003-4916-291X" target="_blank" class="profile-link">ORCID</a>
+            </div>
           </div>
           <div
             style="flex: 0 0 250px; display: flex; align-items: center; justify-content: center; background: var(--bg-subtle); border-radius: 16px;">
@@ -172,7 +193,8 @@
     <section id="publications-tile" class="bento-item glass reveal">
       <div class="bento-header">
         <h2>Selected Publications</h2>
-        <a href="#" style="font-size: 0.8rem; color: var(--accent);">Google Scholar</a>
+        <a href="https://scholar.google.co.jp/citations?hl=ja&user=uMtSOzAAAAAJ&view_op=list_works&sortby=pubdate"
+          target="_blank" style="font-size: 0.8rem; color: var(--accent);">Google Scholar</a>
       </div>
       <div class="bento-body">
         <ul style="list-style: none; display: flex; flex-direction: column; gap: 1rem;">
@@ -253,6 +275,59 @@
   </footer>
 
   <script type="module" src="./src/main.js"></script>
+
+  <!-- Research Detail Modals -->
+  <div id="modal-overlay" class="modal-overlay">
+    <div class="modal">
+      <button class="modal-close">&times;</button>
+      <div id="modal-content" class="modal-content"></div>
+    </div>
+  </div>
+
+  <template id="research-modal-1">
+    <div class="modal-header">
+      <img src="./original/research2.png" alt="Research 1">
+      <h2>土壌に生息する原生動物（捕食性原生生物）の多様性と機能</h2>
+    </div>
+    <div class="modal-body">
+      <p>土壌中の捕食者として働くアメーバ、繊毛虫、べん毛虫などの原生動物に焦点を当てた研究です。これらの単細胞生物は非常に多様で未知の部分が多く、細菌や糸状菌を捕食することで土壌微生物相の「Game
+        Changer」となる可能性を秘めています。</p>
+      <p>研究室では、その多様性、生態、土壌の物質循環や他の微生物との相互作用について研究を進めています。</p>
+    </div>
+  </template>
+
+  <template id="research-modal-2">
+    <div class="modal-header">
+      <img src="./original/research3.png" alt="Research 2">
+      <h2>遺伝型・表現型が支配する水稲根圏の微生物食物連鎖構造と機能</h2>
+    </div>
+    <div class="modal-body">
+      <p>水稲の品種（遺伝型）や栽培環境（表現型）が、根の周り（根圏）に生息する細菌・糸状菌、およびそれらを捕食する原生生物との食物連鎖に及ぼす影響を研究しています。</p>
+      <p>植物の状態が微生物に与える「ボトムアップ効果」と、捕食者が細菌群集や植物の成長に与える「トップダウン効果」の両面から、複雑な相互作用の解明を目指します。</p>
+    </div>
+  </template>
+
+  <template id="research-modal-3">
+    <div class="modal-header">
+      <img src="./original/research4.jpg" alt="Research 3">
+      <h2>データ駆動型の作物モデル開発</h2>
+    </div>
+    <div class="modal-body">
+      <p>気象、植物の生育状況、土壌成分、遺伝子情報など、多岐にわたる農業データを情報科学的なアプローチで活用します。</p>
+      <p>センシングデータに発生しがちな欠損や異常値を作物モデルで補完し、同時に実測データでモデルの精度を高めるという相補的な関係を利用して、農業の生産性向上に資するデータ駆動型の成長モデル開発を行います。</p>
+    </div>
+  </template>
+
+  <template id="research-modal-4">
+    <div class="modal-header">
+      <img src="./original/research5.png" alt="Research 4">
+      <h2>水田土壌表層における物質循環と微生物動態</h2>
+    </div>
+    <div class="modal-body">
+      <p>多くの生態系に普遍的に形成される「酸化還元境界層」における微生物動態を研究しています。</p>
+      <p>環境要因や人為的な「ゆらぎ」が、光合成微生物、メタン生成古細菌、鉄酸化細菌などの活動や、微生物間の競合・捕食関係にどう影響するかを調査し、温室効果ガス代謝など物質循環の仕組みを多角的に解明します。</p>
+    </div>
+  </template>
 </body>
 
 </html>

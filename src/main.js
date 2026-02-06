@@ -52,7 +52,7 @@ window.addEventListener('scroll', () => {
   sections.forEach(section => {
     const sectionTop = section.offsetTop;
     const sectionHeight = section.clientHeight;
-    if (pageYOffset >= (sectionTop - 100)) {
+    if (window.pageYOffset >= (sectionTop - 100)) {
       current = section.getAttribute('id');
     }
   });
@@ -63,4 +63,51 @@ window.addEventListener('scroll', () => {
       link.classList.add('active');
     }
   });
+});
+
+// Modal System logic
+const modalOverlay = document.getElementById('modal-overlay');
+const modalContent = document.getElementById('modal-content');
+const modalClose = document.querySelector('.modal-close');
+const researchCards = document.querySelectorAll('.research-card');
+
+function openModal(targetId) {
+  const template = document.getElementById(targetId);
+  if (!template) return;
+
+  const clone = template.content.cloneNode(true);
+  modalContent.innerHTML = '';
+  modalContent.appendChild(clone);
+  
+  modalOverlay.classList.add('active');
+  document.body.style.overflow = 'hidden'; // Prevent scrolling
+}
+
+function closeModal() {
+  modalOverlay.classList.remove('active');
+  document.body.style.overflow = ''; // Restore scrolling
+  setTimeout(() => {
+    modalContent.innerHTML = '';
+  }, 300);
+}
+
+researchCards.forEach(card => {
+  card.addEventListener('click', () => {
+    const targetId = card.getAttribute('data-target');
+    openModal(targetId);
+  });
+});
+
+modalClose.addEventListener('click', closeModal);
+
+modalOverlay.addEventListener('click', (e) => {
+  if (e.target === modalOverlay) {
+    closeModal();
+  }
+});
+
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape' && modalOverlay.classList.contains('active')) {
+    closeModal();
+  }
 });
