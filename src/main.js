@@ -69,7 +69,7 @@ window.addEventListener('scroll', () => {
 const modalOverlay = document.getElementById('modal-overlay');
 const modalContent = document.getElementById('modal-content');
 const modalClose = document.querySelector('.modal-close');
-const researchCards = document.querySelectorAll('.research-card, .member-card');
+const researchCards = document.querySelectorAll('.research-card, .member-card, #publications-tile');
 
 function openModal(targetId) {
   const template = document.getElementById(targetId);
@@ -78,7 +78,7 @@ function openModal(targetId) {
   const clone = template.content.cloneNode(true);
   modalContent.innerHTML = '';
   modalContent.appendChild(clone);
-  
+
   modalOverlay.classList.add('active');
   document.body.style.overflow = 'hidden'; // Prevent scrolling
 }
