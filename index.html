@@ -11,12 +11,13 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Noto+Sans+JP:wght@300;400;700&display=swap"
     rel="stylesheet">
-  <link rel="stylesheet" href="/src/style.css">
+  <link rel="stylesheet" href="./src/style.css">
 </head>
 
 <body>
   <nav id="navbar">
-    <div class="nav-container" style="display: flex; justify-content: space-between; align-items: center; width: 100%; max-width: 1400px; margin: 0 auto;">
+    <div class="nav-container"
+      style="display: flex; justify-content: space-between; align-items: center; width: 100%; max-width: 1400px; margin: 0 auto;">
       <div class="logo">
         <span class="logo-accent">InfoSci</span>AgriLands
       </div>
@@ -28,13 +29,15 @@
         <li><a href="#gallery-tile">Gallery</a></li>
         <li><a href="#contact-tile">Contact</a></li>
       </ul>
-      <a href="#contact-tile" class="btn btn-primary" style="padding: 0.6rem 1.5rem; font-size: 0.85rem; border: none;">Join Us</a>
+      <a href="#contact-tile" class="btn btn-primary"
+        style="padding: 0.6rem 1.5rem; font-size: 0.85rem; border: none;">Join Us</a>
     </div>
   </nav>
 
   <main class="dashboard-grid">
     <!-- Hero Tile -->
-    <section id="hero-tile" class="bento-item reveal" style="background: linear-gradient(rgba(15, 23, 42, 0.7), rgba(15, 23, 42, 0.7)), url('/original/hero.jpg') center/cover;">
+    <section id="hero-tile" class="bento-item reveal"
+      style="background: linear-gradient(rgba(15, 23, 42, 0.7), rgba(15, 23, 42, 0.7)), url('./original/hero.jpg') center/cover;">
       <div class="hero-content">
         <h1 style="font-size: clamp(2.5rem, 5vw, 4rem); line-height: 1.1; margin-bottom: 1.5rem; color: white;">
           情報科学が拓く<br><span style="color: var(--accent);">持続可能な農学</span>
@@ -50,7 +53,8 @@
     <section id="news-tile" class="bento-item glass reveal">
       <div class="bento-header">
         <h2>Updates</h2>
-        <span class="badge" style="background: var(--accent-glow); color: var(--accent); padding: 0.2rem 0.6rem; border-radius: 20px; font-size: 0.7rem; font-weight: 700;">LIVE</span>
+        <span class="badge"
+          style="background: var(--accent-glow); color: var(--accent); padding: 0.2rem 0.6rem; border-radius: 20px; font-size: 0.7rem; font-weight: 700;">LIVE</span>
       </div>
       <div class="bento-body">
         <div class="news-list" style="display: flex; flex-direction: column; gap: 1.2rem;">
@@ -92,28 +96,28 @@
         <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));">
           <div class="card" style="padding: 1rem; background: var(--bg-subtle); border-radius: 16px;">
             <div style="height: 100px; overflow: hidden; border-radius: 12px; margin-bottom: 0.8rem;">
-              <img src="/original/research2.png" alt="Soil" style="width: 100%; height: 100%; object-fit: cover;">
+              <img src="./original/research2.png" alt="Soil" style="width: 100%; height: 100%; object-fit: cover;">
             </div>
             <h3 style="font-size: 1rem; margin-bottom: 0.5rem;">土壌原生生物の多様性</h3>
             <p style="font-size: 0.85rem;">原生動物が土壌の物質循環に与えるポテンシャルを研究。</p>
           </div>
           <div class="card" style="padding: 1rem; background: var(--bg-subtle); border-radius: 16px;">
             <div style="height: 100px; overflow: hidden; border-radius: 12px; margin-bottom: 0.8rem;">
-              <img src="/original/research3.png" alt="Microbes" style="width: 100%; height: 100%; object-fit: cover;">
+              <img src="./original/research3.png" alt="Microbes" style="width: 100%; height: 100%; object-fit: cover;">
             </div>
             <h3 style="font-size: 1rem; margin-bottom: 0.5rem;">根圏微生物食物連鎖</h3>
             <p style="font-size: 0.85rem;">イネの表現型が根圏微生物に与える影響を解明。</p>
           </div>
           <div class="card" style="padding: 1rem; background: var(--bg-subtle); border-radius: 16px;">
             <div style="height: 100px; overflow: hidden; border-radius: 12px; margin-bottom: 0.8rem;">
-              <img src="/original/research4.jpg" alt="ICT" style="width: 100%; height: 100%; object-fit: cover;">
+              <img src="./original/research4.jpg" alt="ICT" style="width: 100%; height: 100%; object-fit: cover;">
             </div>
             <h3 style="font-size: 1rem; margin-bottom: 0.5rem;">農業ICT・センシング</h3>
             <p style="font-size: 0.85rem;">ドローンや衛星を用いた非破壊計測手法の開発。</p>
           </div>
           <div class="card" style="padding: 1rem; background: var(--bg-subtle); border-radius: 16px;">
             <div style="height: 100px; overflow: hidden; border-radius: 12px; margin-bottom: 0.8rem;">
-              <img src="/original/research5.png" alt="Computing" style="width: 100%; height: 100%; object-fit: cover;">
+              <img src="./original/research5.png" alt="Computing" style="width: 100%; height: 100%; object-fit: cover;">
             </div>
             <h3 style="font-size: 1rem; margin-bottom: 0.5rem;">作物モデル構築</h3>
             <p style="font-size: 0.85rem;">膨大なデータを用いた生育シミュレーションと予測。</p>
@@ -130,27 +134,31 @@
       <div class="bento-body">
         <div style="display: flex; gap: 2rem; overflow-x: auto; padding-bottom: 1rem; scrollbar-width: thin;">
           <div style="flex: 0 0 250px; text-align: center;">
-            <div style="width: 100px; height: 100px; border-radius: 50%; margin: 0 auto 1rem; overflow: hidden; border: 3px solid var(--accent);">
-              <img src="/original/murase.jpg" alt="村瀬 潤" style="width: 100%; height: 100%; object-fit: cover;">
+            <div
+              style="width: 100px; height: 100px; border-radius: 50%; margin: 0 auto 1rem; overflow: hidden; border: 3px solid var(--accent);">
+              <img src="./original/murase.jpg" alt="村瀬 潤" style="width: 100%; height: 100%; object-fit: cover;">
             </div>
             <h3 style="font-size: 1.1rem; margin-bottom: 0.2rem;">村瀬 潤</h3>
             <p style="font-size: 0.85rem; color: var(--accent);">教授 / 博士(農学)</p>
           </div>
           <div style="flex: 0 0 250px; text-align: center;">
-            <div style="width: 100px; height: 100px; border-radius: 50%; margin: 0 auto 1rem; overflow: hidden; background: var(--bg-subtle); display: flex; align-items: center; justify-content: center;">
+            <div
+              style="width: 100px; height: 100px; border-radius: 50%; margin: 0 auto 1rem; overflow: hidden; background: var(--bg-subtle); display: flex; align-items: center; justify-content: center;">
               <span style="font-size: 2rem; color: var(--text-dim);">KD</span>
             </div>
             <h3 style="font-size: 1.1rem; margin-bottom: 0.2rem;">土井 一行</h3>
             <p style="font-size: 0.85rem; color: var(--accent);">准教授 / 博士(農学)</p>
           </div>
           <div style="flex: 0 0 250px; text-align: center;">
-            <div style="width: 100px; height: 100px; border-radius: 50%; margin: 0 auto 1rem; overflow: hidden; background: var(--bg-subtle); display: flex; align-items: center; justify-content: center;">
+            <div
+              style="width: 100px; height: 100px; border-radius: 50%; margin: 0 auto 1rem; overflow: hidden; background: var(--bg-subtle); display: flex; align-items: center; justify-content: center;">
               <span style="font-size: 2rem; color: var(--text-dim);">SN</span>
             </div>
             <h3 style="font-size: 1.1rem; margin-bottom: 0.2rem;">西内 俊策</h3>
             <p style="font-size: 0.85rem; color: var(--accent);">助教 / 博士(農学)</p>
           </div>
-          <div style="flex: 0 0 250px; display: flex; align-items: center; justify-content: center; background: var(--bg-subtle); border-radius: 16px;">
+          <div
+            style="flex: 0 0 250px; display: flex; align-items: center; justify-content: center; background: var(--bg-subtle); border-radius: 16px;">
             <div style="text-align: center;">
               <p style="font-size: 1.2rem; font-weight: 700; color: var(--primary);">20+ Students</p>
               <p style="font-size: 0.8rem; color: var(--text-dim);">D: 3, M: 11, B: 4</p>
@@ -169,13 +177,15 @@
       <div class="bento-body">
         <ul style="list-style: none; display: flex; flex-direction: column; gap: 1rem;">
           <li style="font-size: 0.9rem; border-left: 2px solid var(--accent); padding-left: 1rem;">
-            <strong>2024:</strong> Detection of QTLs regulating the second internode length in rice dwarf mutant d1. (Breed. Sci. 74)
+            <strong>2024:</strong> Detection of QTLs regulating the second internode length in rice dwarf mutant d1.
+            (Breed. Sci. 74)
           </li>
           <li style="font-size: 0.9rem; border-left: 2px solid var(--accent); padding-left: 1rem;">
             <strong>2024:</strong> Evaluation of grain-filling-related traits using CSSLs of rice. (Plants 13)
           </li>
           <li style="font-size: 0.9rem; border-left: 2px solid var(--accent); padding-left: 1rem;">
-            <strong>2022:</strong> Estimating yield-related traits using UAV-derived multispectral images. (Agriculture 12)
+            <strong>2022:</strong> Estimating yield-related traits using UAV-derived multispectral images. (Agriculture
+            12)
           </li>
         </ul>
       </div>
@@ -188,10 +198,15 @@
       </div>
       <div class="bento-body">
         <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.8rem; height: 100%;">
-          <div style="border-radius: 12px; overflow: hidden;"><img src="/original/gallery/gallery2.png" alt="Togo Field" style="width: 100%; height: 100%; object-fit: cover;"></div>
-          <div style="border-radius: 12px; overflow: hidden;"><img src="/original/gallery/gallery3.png" alt="Drone" style="width: 100%; height: 100%; object-fit: cover;"></div>
-          <div style="border-radius: 12px; overflow: hidden;"><img src="/original/gallery/gallery4.png" alt="Ecosystem" style="width: 100%; height: 100%; object-fit: cover;"></div>
-          <div style="border-radius: 12px; overflow: hidden; background: var(--bg-subtle); display: flex; align-items: center; justify-content: center; font-weight: 700; color: var(--accent);">+ More</div>
+          <div style="border-radius: 12px; overflow: hidden;"><img src="./original/gallery/gallery2.png"
+              alt="Togo Field" style="width: 100%; height: 100%; object-fit: cover;"></div>
+          <div style="border-radius: 12px; overflow: hidden;"><img src="./original/gallery/gallery3.png" alt="Drone"
+              style="width: 100%; height: 100%; object-fit: cover;"></div>
+          <div style="border-radius: 12px; overflow: hidden;"><img src="./original/gallery/gallery4.png" alt="Ecosystem"
+              style="width: 100%; height: 100%; object-fit: cover;"></div>
+          <div
+            style="border-radius: 12px; overflow: hidden; background: var(--bg-subtle); display: flex; align-items: center; justify-content: center; font-weight: 700; color: var(--accent);">
+            + More</div>
         </div>
       </div>
     </section>
@@ -202,13 +217,16 @@
         <h2>Q&A</h2>
       </div>
       <div class="bento-body">
-        <details style="margin-bottom: 0.5rem; border: 1px solid var(--glass-border); border-radius: 8px; padding: 0.5rem;">
+        <details
+          style="margin-bottom: 0.5rem; border: 1px solid var(--glass-border); border-radius: 8px; padding: 0.5rem;">
           <summary style="font-weight: 600; cursor: pointer; outline: none; font-size: 0.9rem;">どんなことが学べますか？</summary>
-          <p style="font-size: 0.85rem; margin-top: 0.5rem; color: var(--text-dim);">育種・栽培・土壌の三つの切り口から、情報科学を用いた最新の研究手法を学べます。</p>
+          <p style="font-size: 0.85rem; margin-top: 0.5rem; color: var(--text-dim);">
+            育種・栽培・土壌の三つの切り口から、情報科学を用いた最新の研究手法を学べます。</p>
         </details>
         <details style="border: 1px solid var(--glass-border); border-radius: 8px; padding: 0.5rem;">
           <summary style="font-weight: 600; cursor: pointer; outline: none; font-size: 0.9rem;">卒業後の進路は？</summary>
-          <p style="font-size: 0.85rem; margin-top: 0.5rem; color: var(--text-dim);">大学院進学のほか、公務員、農業関連企業、IT、食品メーカーなど多岐にわたります。</p>
+          <p style="font-size: 0.85rem; margin-top: 0.5rem; color: var(--text-dim);">
+            大学院進学のほか、公務員、農業関連企業、IT、食品メーカーなど多岐にわたります。</p>
         </details>
       </div>
     </section>
@@ -223,16 +241,18 @@
           <p style="font-size: 0.9rem;">〒470-0151 愛知県東郷町大字諸輪字畑尻94</p>
           <p style="font-size: 0.9rem; font-weight: 700; margin-top: 0.3rem;">名古屋大学 東郷フィールド</p>
         </div>
-        <a href="mailto:example@nagoya-u.jp" class="btn btn-primary" style="padding: 0.8rem 2rem; border: none;">Contact Lab</a>
+        <a href="mailto:example@nagoya-u.jp" class="btn btn-primary" style="padding: 0.8rem 2rem; border: none;">Contact
+          Lab</a>
       </div>
     </section>
   </main>
 
   <footer style="margin-top: 4rem; padding: 4rem 2rem; background: var(--primary); color: white; text-align: center;">
-    <p style="font-size: 0.9rem;">&copy; 2024 Laboratory of Information Sciences in Agricultural Lands. 名古屋大学 耕地情報利用研究室</p>
+    <p style="font-size: 0.9rem;">&copy; 2024 Laboratory of Information Sciences in Agricultural Lands. 名古屋大学 耕地情報利用研究室
+    </p>
   </footer>
 
-  <script type="module" src="/src/main.js"></script>
+  <script type="module" src="./src/main.js"></script>
 </body>
 
 </html>
