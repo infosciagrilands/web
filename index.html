@@ -94,37 +94,45 @@
       </div>
       <div class="bento-body">
         <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));">
-          <!-- Card 1 -->
+          <!-- Card 1: Genetics/QTL -->
           <div class="card research-card" data-target="research-modal-1">
             <div class="research-img-box">
-              <img src="./original/research2.png" alt="Soil">
+              <img src="./original/gallery/gallery2.png" alt="Genetics">
             </div>
-            <h3>土壌原生生物の多様性</h3>
-            <p>細菌群集を制御する「Game Changer」としての原生生物学。</p>
+            <h3>イネ遺伝解析・QTL探索</h3>
+            <p>多様な遺伝資源と統計手法を用いた、次世代のイネ育種基盤の開発。</p>
           </div>
-          <!-- Card 2 -->
+          <!-- Card 2: NAM -->
           <div class="card research-card" data-target="research-modal-2">
             <div class="research-img-box">
-              <img src="./original/research3.png" alt="Microbes">
+              <img src="./original/research5.png" alt="NAM">
             </div>
-            <h3>根圏微生物食物連鎖</h3>
-            <p>植物の遺伝型が微生物群集に与える影響の解明。</p>
+            <h3>イネNAM集団の構築</h3>
+            <p>複雑な農業形質の遺伝背景を解明する、大規模かつ精密な集団解析。</p>
           </div>
-          <!-- Card 3 -->
+          <!-- Card 3: Sensing -->
           <div class="card research-card" data-target="research-modal-3">
             <div class="research-img-box">
-              <img src="./original/research4.jpg" alt="ICT">
+              <img src="./original/research4.jpg" alt="Sensing">
             </div>
-            <h3>データ駆動型作物モデル</h3>
-            <p>センシングデータと生育シミュレーションの融合。</p>
+            <h3>スマート農業・センシング</h3>
+            <p>ドローンやICTを用いた、環境と植物生体情報のリアルタイム計測。</p>
           </div>
-          <!-- Card 4 -->
+          <!-- Card 4: Protists -->
           <div class="card research-card" data-target="research-modal-4">
             <div class="research-img-box">
-              <img src="./original/research5.png" alt="Computing">
+              <img src="./original/research2.png" alt="Protists">
             </div>
-            <h3>水田土壌の物質循環</h3>
-            <p>酸化還元境界層における微生物動態と温室効果ガス代謝。</p>
+            <h3>土壌原生生物の機能</h3>
+            <p>土壌生態系のキーストーン「捕食性原生生物」の多様性と役割。</p>
+          </div>
+          <!-- Card 5: Rhizosphere -->
+          <div class="card research-card" data-target="research-modal-5">
+            <div class="research-img-box">
+              <img src="./original/research3.png" alt="Rhizosphere">
+            </div>
+            <h3>根圏微生物食物連鎖</h3>
+            <p>イネの遺伝型が支配する、根圏微生物コミュニティの構造と機能。</p>
           </div>
         </div>
       </div>
@@ -286,46 +294,75 @@
 
   <template id="research-modal-1">
     <div class="modal-header">
-      <img src="./original/research2.png" alt="Research 1">
-      <h2>土壌に生息する原生動物（捕食性原生生物）の多様性と機能</h2>
+      <img src="./original/gallery/gallery2.png" alt="Research 1">
+      <h2>イネ遺伝解析材料および育種素材の開発と農業形質に関与するQTLの探索</h2>
     </div>
     <div class="modal-body">
-      <p>土壌中の捕食者として働くアメーバ、繊毛虫、べん毛虫などの原生動物に焦点を当てた研究です。これらの単細胞生物は非常に多様で未知の部分が多く、細菌や糸状菌を捕食することで土壌微生物相の「Game
-        Changer」となる可能性を秘めています。</p>
-      <p>研究室では、その多様性、生態、土壌の物質循環や他の微生物との相互作用について研究を進めています。</p>
+      <p>イネの多種多様な遺伝資源を活用し、新技術を用いた効率的な品種開発と、農業的に重要な形質（収量、品質、耐病性など）を支配する遺伝子領域（QTL: Quantitative Trait Loci）の同定を目指しています。
+      </p>
+      <p>
+        具体的には、日本型品種とインド型品種の交配から得られた「染色体断片置換系統群（CSSL）」や、複数の親系統を複雑に交配させた系統群を用い、ゲノム情報と形質データを高度な統計手法で結びつけることで、目的とする遺伝子をピンポイントで捜索します。これにより、環境適応性の高い次世代のイネ育種に貢献する基盤技術の開発に取り組んでいます。
+      </p>
     </div>
   </template>
 
   <template id="research-modal-2">
     <div class="modal-header">
-      <img src="./original/research3.png" alt="Research 2">
-      <h2>遺伝型・表現型が支配する水稲根圏の微生物食物連鎖構造と機能</h2>
+      <img src="./original/research5.png" alt="Research 2">
+      <h2>イネNested Association Mapping (NAM) 集団の構築と活用</h2>
     </div>
     <div class="modal-body">
-      <p>水稲の品種（遺伝型）や栽培環境（表現型）が、根の周り（根圏）に生息する細菌・糸状菌、およびそれらを捕食する原生生物との食物連鎖に及ぼす影響を研究しています。</p>
-      <p>植物の状態が微生物に与える「ボトムアップ効果」と、捕食者が細菌群集や植物の成長に与える「トップダウン効果」の両面から、複雑な相互作用の解明を目指します。</p>
+      <p>Nested Association Mapping (NAM)
+        は、複雑な農業形質の遺伝背景を解明するための強力なツールです。本研究室では、標準的な日本型イネ系統を共通の親にし、世界各地の多様な遺伝的背景を持つ複数の系統と個別に交配させることで、大規模かつシステマティックなNAM集団を構築しています。
+      </p>
+      <p>
+        この集団を用いることで、従来の系統では捉えきれなかった微小な遺伝的効果や、特定の環境下でのみ発現する特性を高い解像度で解析することが可能になります。得られたデータは、全ゲノム関連解析（GWAS）と組み合わせることで、有用遺伝子の早期発見と、より精密な「デザイン育種」の実現に向けた核心的な情報となります。
+      </p>
     </div>
   </template>
 
   <template id="research-modal-3">
     <div class="modal-header">
       <img src="./original/research4.jpg" alt="Research 3">
-      <h2>データ駆動型の作物モデル開発</h2>
+      <h2>センシングによる経時的な環境や生体情報の獲得</h2>
     </div>
     <div class="modal-body">
-      <p>気象、植物の生育状況、土壌成分、遺伝子情報など、多岐にわたる農業データを情報科学的なアプローチで活用します。</p>
-      <p>センシングデータに発生しがちな欠損や異常値を作物モデルで補完し、同時に実測データでモデルの精度を高めるという相補的な関係を利用して、農業の生産性向上に資するデータ駆動型の成長モデル開発を行います。</p>
+      <p>
+        農業生産現場における「個体の声」を可視化するため、最新のセンシング技術とICT（情報通信技術）を統合したスマート農業の研究を推進しています。圃場に設置した各種センサーや、ドローンを用いたリモートセンシングを活用し、土壌水分、光量、気象、そして植物自体の形態的・生理的な変化をリアルタイムで継続的に計測します。
+      </p>
+      <p>
+        これらのビッグデータを時系列データとして解析することで、いつ、どこで植物がストレスを感じているか、あるいは成長のピークを迎えているかを科学的に把握します。この「デジタルツイン」的手法により、圃場管理の最適化だけでなく、遺伝子型と環境の相互作用を解明するための基礎データ収集を飛躍的に効率化しています。
+      </p>
     </div>
   </template>
 
   <template id="research-modal-4">
     <div class="modal-header">
-      <img src="./original/research5.png" alt="Research 4">
-      <h2>水田土壌表層における物質循環と微生物動態</h2>
+      <img src="./original/research2.png" alt="Research 4">
+      <h2>土壌に生息する原生動物（捕食性原生生物）の多様性と機能</h2>
     </div>
     <div class="modal-body">
-      <p>多くの生態系に普遍的に形成される「酸化還元境界層」における微生物動態を研究しています。</p>
-      <p>環境要因や人為的な「ゆらぎ」が、光合成微生物、メタン生成古細菌、鉄酸化細菌などの活動や、微生物間の競合・捕食関係にどう影響するかを調査し、温室効果ガス代謝など物質循環の仕組みを多角的に解明します。</p>
+      <p>
+        土壌生態系の「隠れた捕食者」である原生生物に焦点を当て、その多様性と農業生産における役割を研究しています。土壌中の細菌や菌類を捕食する原生生物は、養分循環の駆動者として極めて重要な役割を果たしていますが、その実態はまだ多くの謎に包まれています。
+      </p>
+      <p>
+        私たちは、DNA解析や顕微鏡観察を駆使して、耕作地における原生生物のコミュニティ構造を明らかにし、それらが作物の成育や病害抑止にどのように関わっているかを解析しています。特に、捕食活動を通じて植物に利用可能な窒素を供給する「微生物ループ」の解明を通じて、農薬や化学肥料に頼りすぎない、持続可能な土壌管理技術の提案を目指しています。
+      </p>
+    </div>
+  </template>
+
+  <template id="research-modal-5">
+    <div class="modal-header">
+      <img src="./original/research3.png" alt="Research 5">
+      <h2>遺伝型・表現型が支配する水稲根圏の微生物食物連鎖構造と機能</h2>
+    </div>
+    <div class="modal-body">
+      <p>
+        植物の根の周囲（根圏）は、植物が放出する分泌物によって多様な微生物が密集する、生命活動のホットスポットです。本研究では、イネの「遺伝型」が根の性質（表現型）を介して、根圏の微生物コミュニティやその中での食物連鎖（バクテリア、菌類、そしてそれらを食べる原生生物など）にどのような影響を与えるかを調査しています。
+      </p>
+      <p>
+        特定の遺伝子を持つイネが、自分に有利な微生物を呼び寄せている可能性があります。この分子レベルからの生態系構築プロセスを解明することで、植物自体の力を引き出し、病害虫への耐性を高めたり、肥料効率を向上させたりする「微生物共生を考慮した新しいイネ育種」の可能性を拓きます。
+      </p>
     </div>
   </template>
 </body>
