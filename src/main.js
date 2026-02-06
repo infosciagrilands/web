@@ -149,10 +149,11 @@ const researchGrid = document.getElementById('research-grid');
 const expandBtn = document.getElementById('research-expand-btn');
 let isExpanded = false;
 let shuffleInterval;
+let currentIndices = [0, 1, 2]; // Keep track of what's currently shown
 
 function createCardHTML(theme) {
   return `
-    <div class="card research-card reveal active" data-target="${theme.id}" style="animation: fadeInUp 0.5s ease;">
+    <div class="card research-card reveal active" data-target="${theme.id}" style="transition: opacity 0.5s ease; opacity: 1;">
       <div class="research-img-box">
         <img src="${theme.img}" alt="${theme.title}">
       </div>
@@ -166,6 +167,10 @@ function renderThemes(indices) {
   if (!researchGrid) return;
   researchGrid.innerHTML = indices.map(i => createCardHTML(researchThemes[i])).join('');
   // Re-bind click events for new cards
+  bindCardEvents();
+}
+
+function bindCardEvents() {
   document.querySelectorAll('#research-grid .research-card').forEach(card => {
     card.addEventListener('click', () => {
       openModal(card.getAttribute('data-target'));
@@ -175,22 +180,50 @@ function renderThemes(indices) {
 
 function startShuffle() {
   // Initial render
-  let currentIndices = [0, 1, 2];
+  currentIndices = [0, 1, 2];
   renderThemes(currentIndices);
 
   if (shuffleInterval) clearInterval(shuffleInterval);
+
+  // Update one card randomly
   shuffleInterval = setInterval(() => {
     if (isExpanded) return;
 
-    // Pick 3 random unique indices
-    const newIndices = [];
-    while (newIndices.length < 3) {
-      const r = Math.floor(Math.random() * researchThemes.length);
-      if (newIndices.indexOf(r) === -1) newIndices.push(r);
-    }
+    // Pick one of the 3 slots (0, 1, or 2)
+    const slotToUpdate = Math.floor(Math.random() * 3);
 
-    renderThemes(newIndices);
-  }, 5000);
+    // Pick a new theme index that is NOT currently visible
+    let newThemeIndex;
+    do {
+      newThemeIndex = Math.floor(Math.random() * researchThemes.length);
+    } while (currentIndices.includes(newThemeIndex));
+
+    // Update state
+    currentIndices[slotToUpdate] = newThemeIndex;
+
+    // DOM Manipulation to animate just this card
+    const cards = researchGrid.querySelectorAll('.research-card');
+    if (cards[slotToUpdate]) {
+      const card = cards[slotToUpdate];
+      card.style.opacity = '0'; // Fade out
+
+      setTimeout(() => {
+        // Replace content
+        const theme = researchThemes[newThemeIndex];
+        const newHTML = `
+          <div class="research-img-box">
+            <img src="${theme.img}" alt="${theme.title}">
+          </div>
+          <h3>${theme.title}</h3>
+          <p>${theme.desc}</p>
+        `;
+        card.innerHTML = newHTML;
+        card.setAttribute('data-target', theme.id);
+        bindCardEvents(); // Re-bind click for this card
+        card.style.opacity = '1'; // Fade in
+      }, 500); // Wait for fade out
+    }
+  }, 4000); // 4 seconds interval
 }
 
 if (researchGrid && expandBtn) {
@@ -211,6 +244,17 @@ if (researchGrid && expandBtn) {
       startShuffle();
     }
   });
+}
+
+// --- Hero Slideshow Logic ---
+const heroImages = document.querySelectorAll('.hero-bg img');
+if (heroImages.length > 0) {
+  let currentHeroIndex = 0;
+  setInterval(() => {
+    heroImages[currentHeroIndex].classList.remove('active');
+    currentHeroIndex = (currentHeroIndex + 1) % heroImages.length;
+    heroImages[currentHeroIndex].classList.add('active');
+  }, 5000);
 }
 
 modalClose.addEventListener('click', closeModal);

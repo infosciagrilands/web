@@ -36,10 +36,16 @@
 
   <main class="dashboard-grid">
     <!-- Hero Tile -->
-    <section id="hero-tile" class="bento-item reveal"
-      style="background: linear-gradient(rgba(15, 23, 42, 0.7), rgba(15, 23, 42, 0.7)), url('./original/hero.jpg') center/cover;">
-      <div class="hero-content">
-        <h1 style="font-size: clamp(2.5rem, 5vw, 4rem); line-height: 1.1; margin-bottom: 1.5rem; color: white;">
+    <section id="hero-tile" class="bento-item reveal" style="position: relative; overflow: hidden;">
+      <div class="hero-bg">
+        <img src="./original/hero.jpg" class="active" alt="Hero 1">
+        <img src="./original/group.jpg" alt="Hero 2">
+        <img src="./original/research4.jpg" alt="Hero 3">
+        <img src="./original/gallery/gallery2.png" alt="Hero 4">
+      </div>
+      <div class="hero-content" style="position: relative; z-index: 2; text-align: center; width: 100%;">
+        <h1
+          style="font-size: clamp(2.5rem, 5vw, 4rem); line-height: 1.1; margin-bottom: 1.5rem; color: white; text-shadow: 0 4px 12px rgba(0,0,0,0.5);">
           情報科学が拓く<br><span style="color: var(--accent);">持続可能な農学</span>
         </h1>
         <p style="font-size: 1.1rem; color: rgba(255,255,255,0.8); max-width: 600px;">
