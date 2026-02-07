@@ -9,6 +9,8 @@
   --accent: #fbbf24;
   /* Amber/Gold for key highlights */
   --accent-glow: rgba(251, 191, 36, 0.4);
+  --accent-dark: #f59e0b;
+  /* Darker amber for buttons */
 
   --text-main: #e2e8f0;
   /* Main text - Soft white/grey for readability on dark */
@@ -37,6 +39,7 @@
     --primary-light: #dcfce7;
     --accent: #fbbf24;
     --accent-glow: rgba(251, 191, 36, 0.4);
+    --accent-dark: #f59e0b;
     --text-main: #e2e8f0;
     --text-dim: #94a3b8;
     --bg-main: #052e16;
@@ -229,7 +232,7 @@ nav.scrolled {
 }
 
 .btn-primary {
-  background: var(--accent);
+  background: var(--accent-dark);
   color: white;
   box-shadow: 0 4px 15px var(--accent-glow);
 }
