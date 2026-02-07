@@ -1,4 +1,5 @@
 import './style.css'
+import { marked } from 'marked';
 
 // Navbar scroll effect
 const navbar = document.getElementById('navbar');
@@ -65,33 +66,124 @@ window.addEventListener('scroll', () => {
   });
 });
 
+// --- Dynamic Research Themes Logic ---
+const researchThemes = [
+  {
+    id: 'research-modal-1',
+    title: 'イネ遺伝解析・QTL探索',
+    desc: '多様な遺伝資源と統計手法を用いた、次世代のイネ育種基盤の開発。',
+    img: '/research_themes/crossing.jpg',
+    mdFile: '/research_themes/crossing.md'
+  },
+  {
+    id: 'research-modal-2',
+    title: 'イネNAM集団の構築',
+    desc: '複雑な農業形質の遺伝背景を解明する、大規模かつ精密な集団解析。',
+    img: '/research_themes/nam.jpg',
+    mdFile: '/research_themes/nam.md'
+
+  },
+  {
+    id: 'research-modal-3',
+    title: 'スマート農業・センシング',
+    desc: 'ドローンやICTを用いた、環境と植物生体情報のリアルタイム計測。',
+    img: '/research_themes/sorghambiomass.jpg',
+    mdFile: '/research_themes/sorghambiomass.md'
+  },
+  {
+    id: 'research-modal-4',
+    title: '土壌原生生物の機能',
+    desc: '土壌生態系のキーストーン「捕食性原生生物」の多様性と役割。',
+    img: '/research_themes/rhizo_diversity.jpg',
+    mdFile: '/research_themes/rhizo_diversity.md'
+  },
+  {
+    id: 'research-modal-5',
+    title: '根圏微生物食物連鎖',
+    desc: 'イネの遺伝型が支配する、根圏微生物コミュニティの構造と機能。',
+    img: '/research_themes/rhizosphere.png',
+    mdFile: '/research_themes/rhizosphere.md'
+  },
+  {
+    id: 'research-modal-6',
+    title: 'データ駆動型作物モデル',
+    desc: 'センシングデータと生育シミュレーションの融合による予測技術。',
+    img: '/research_themes/datadriven.png',
+    mdFile: '/research_themes/datadriven.md'
+  },
+  {
+    id: 'research-modal-7',
+    title: '水田土壌の物質循環',
+    desc: '酸化還元境界層における微生物動態と温室効果ガス代謝の解明。',
+    img: '/research_themes/o2dist.png',
+    mdFile: '/research_themes/o2dist.md'
+  },
+  {
+    id: 'research-modal-8',
+    title: 'イネ登熟の遺伝解析',
+    desc: '多収化に伴う登熟不良を改善する有用遺伝子の探索。',
+    img: '/research_themes/toujuku.jpg',
+    mdFile: '/research_themes/toujuku.md'
+  },
+  {
+    id: 'research-modal-9',
+    title: 'WISHプロジェクト',
+    desc: '名古屋大学発の「世界の稲作をよくする」プロジェクトへの参画。',
+    img: '/research_themes/wish.jpg',
+    mdFile: '/research_themes/wish.md'
+  }
+];
+
 // Modal System logic
 const modalOverlay = document.getElementById('modal-overlay');
 const modalContent = document.getElementById('modal-content');
 const modalClose = document.querySelector('.modal-close');
-const researchCards = document.querySelectorAll('.research-card, .member-card, #publications-tile');
+const researchCards = document.querySelectorAll('.member-card, #publications-tile');
 
-function openModal(targetId) {
-  const template = document.getElementById(targetId);
-  if (!template) return;
+async function openModal(targetId) {
+  // Check if it's a research theme
+  const theme = researchThemes.find(t => t.id === targetId);
 
-  const clone = template.content.cloneNode(true);
-  modalContent.innerHTML = '';
-  modalContent.appendChild(clone);
+  if (theme) {
+    // Load Markdown content
+    try {
+      modalContent.innerHTML = '<div style="padding:2rem; text-align:center;">Loading...</div>';
+      modalOverlay.classList.add('active');
+      document.body.style.overflow = 'hidden';
 
-  modalOverlay.classList.add('active');
-  document.body.style.overflow = 'hidden'; // Prevent scrolling
+      const response = await fetch(theme.mdFile);
+      if (!response.ok) throw new Error('Failed to load content');
+      const text = await response.text();
+      const htmlContent = marked.parse(text);
+
+      modalContent.innerHTML = `<div class="modal-body markdown-body">${htmlContent}</div>`;
+    } catch (error) {
+      console.error(error);
+      modalContent.innerHTML = '<p>Error loading content.</p>';
+    }
+  } else {
+    // Fallback for static templates (Members, Publications)
+    const template = document.getElementById(targetId);
+    if (!template) return;
+
+    const clone = template.content.cloneNode(true);
+    modalContent.innerHTML = '';
+    modalContent.appendChild(clone);
+
+    modalOverlay.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
 }
 
 function closeModal() {
   modalOverlay.classList.remove('active');
-  document.body.style.overflow = ''; // Restore scrolling
+  document.body.style.overflow = '';
   setTimeout(() => {
     modalContent.innerHTML = '';
   }, 300);
 }
 
-// Initial binding for static cards (members, etc.)
+// Initial binding for static cards
 researchCards.forEach(card => {
   card.addEventListener('click', () => {
     const targetId = card.getAttribute('data-target');
@@ -99,57 +191,11 @@ researchCards.forEach(card => {
   });
 });
 
-// --- Dynamic Research Themes Logic ---
-const researchThemes = [
-  {
-    id: 'research-modal-1',
-    title: 'イネ遺伝解析・QTL探索',
-    desc: '多様な遺伝資源と統計手法を用いた、次世代のイネ育種基盤の開発。',
-    img: './original/gallery/gallery2.png'
-  },
-  {
-    id: 'research-modal-2',
-    title: 'イネNAM集団の構築',
-    desc: '複雑な農業形質の遺伝背景を解明する、大規模かつ精密な集団解析。',
-    img: './original/hero.jpg'
-  },
-  {
-    id: 'research-modal-3',
-    title: 'スマート農業・センシング',
-    desc: 'ドローンやICTを用いた、環境と植物生体情報のリアルタイム計測。',
-    img: './original/research4.jpg'
-  },
-  {
-    id: 'research-modal-4',
-    title: '土壌原生生物の機能',
-    desc: '土壌生態系のキーストーン「捕食性原生生物」の多様性と役割。',
-    img: './original/research2.png'
-  },
-  {
-    id: 'research-modal-5',
-    title: '根圏微生物食物連鎖',
-    desc: 'イネの遺伝型が支配する、根圏微生物コミュニティの構造と機能。',
-    img: './original/research3.png'
-  },
-  {
-    id: 'research-modal-6',
-    title: 'データ駆動型作物モデル',
-    desc: 'センシングデータと生育シミュレーションの融合による予測技術。',
-    img: './original/research5.png'
-  },
-  {
-    id: 'research-modal-7',
-    title: '水田土壌の物質循環',
-    desc: '酸化還元境界層における微生物動態と温室効果ガス代謝の解明。',
-    img: './original/gallery/gallery4.png'
-  }
-];
-
 const researchGrid = document.getElementById('research-grid');
 const expandBtn = document.getElementById('research-expand-btn');
 let isExpanded = false;
 let shuffleInterval;
-let currentIndices = [0, 1, 2]; // Keep track of what's currently shown
+let currentIndices = [0, 1, 2];
 
 function createCardHTML(theme) {
   return `
@@ -166,7 +212,6 @@ function createCardHTML(theme) {
 function renderThemes(indices) {
   if (!researchGrid) return;
   researchGrid.innerHTML = indices.map(i => createCardHTML(researchThemes[i])).join('');
-  // Re-bind click events for new cards
   bindCardEvents();
 }
 
@@ -179,36 +224,27 @@ function bindCardEvents() {
 }
 
 function startShuffle() {
-  // Initial render
   currentIndices = [0, 1, 2];
   renderThemes(currentIndices);
 
   if (shuffleInterval) clearInterval(shuffleInterval);
 
-  // Update one card randomly
   shuffleInterval = setInterval(() => {
     if (isExpanded) return;
-
-    // Pick one of the 3 slots (0, 1, or 2)
     const slotToUpdate = Math.floor(Math.random() * 3);
-
-    // Pick a new theme index that is NOT currently visible
     let newThemeIndex;
     do {
       newThemeIndex = Math.floor(Math.random() * researchThemes.length);
     } while (currentIndices.includes(newThemeIndex));
 
-    // Update state
     currentIndices[slotToUpdate] = newThemeIndex;
 
-    // DOM Manipulation to animate just this card
     const cards = researchGrid.querySelectorAll('.research-card');
     if (cards[slotToUpdate]) {
       const card = cards[slotToUpdate];
-      card.style.opacity = '0'; // Fade out
+      card.style.opacity = '0';
 
       setTimeout(() => {
-        // Replace content
         const theme = researchThemes[newThemeIndex];
         const newHTML = `
           <div class="research-img-box">
@@ -219,42 +255,36 @@ function startShuffle() {
         `;
         card.innerHTML = newHTML;
         card.setAttribute('data-target', theme.id);
-        bindCardEvents(); // Re-bind click for this card
-        card.style.opacity = '1'; // Fade in
-      }, 500); // Wait for fade out
+        bindCardEvents();
+        card.style.opacity = '1';
+      }, 500);
     }
-  }, 4000); // 4 seconds interval
+  }, 4000);
 }
 
 if (researchGrid && expandBtn) {
   startShuffle();
-
   const toggleExpand = () => {
     isExpanded = !isExpanded;
     const expandText = document.getElementById('research-expand-text');
-
     if (isExpanded) {
       clearInterval(shuffleInterval);
-      renderThemes([0, 1, 2, 3, 4, 5, 6]); // Show all
+      renderThemes(Array.from({ length: researchThemes.length }, (_, i) => i));
       expandBtn.textContent = '閉じる (Shuffleに戻る)';
       expandBtn.style.background = 'var(--accent)';
       expandBtn.style.color = 'white';
       if (expandText) expandText.textContent = 'Close';
     } else {
-      expandBtn.textContent = '全ての研究テーマを見る (+4)';
+      expandBtn.textContent = '全ての研究テーマを見る (+6)';
       expandBtn.style.background = '';
       expandBtn.style.color = '';
-      if (expandText) expandText.textContent = 'Click to expand (+4)';
+      if (expandText) expandText.textContent = 'Click to expand (+6)';
       startShuffle();
     }
   };
-
   expandBtn.addEventListener('click', toggleExpand);
-
   const headerExpandLink = document.getElementById('research-expand-text');
-  if (headerExpandLink) {
-    headerExpandLink.addEventListener('click', toggleExpand);
-  }
+  if (headerExpandLink) headerExpandLink.addEventListener('click', toggleExpand);
 }
 
 // --- Hero Slideshow Logic ---
@@ -269,15 +299,9 @@ if (heroImages.length > 0) {
 }
 
 modalClose.addEventListener('click', closeModal);
-
 modalOverlay.addEventListener('click', (e) => {
-  if (e.target === modalOverlay) {
-    closeModal();
-  }
+  if (e.target === modalOverlay) closeModal();
 });
-
 document.addEventListener('keydown', (e) => {
-  if (e.key === 'Escape' && modalOverlay.classList.contains('active')) {
-    closeModal();
-  }
+  if (e.key === 'Escape' && modalOverlay.classList.contains('active')) closeModal();
 });
