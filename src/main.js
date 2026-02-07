@@ -153,7 +153,15 @@ async function openModal(targetId) {
 
       const response = await fetch(theme.mdFile);
       if (!response.ok) throw new Error('Failed to load content');
-      const text = await response.text();
+      let text = await response.text();
+
+      // Fix relative image paths in markdown
+      // "./image.jpg" -> "./research_themes/image.jpg" (since we are at root)
+      // But standard markdown parsed from text might not know the context.
+      // Better: Replace "./" with "./research_themes/" for images in the markdown text
+      // because the images are in the same folder as the markdown file.
+      text = text.replace(/!\[(.*?)\]\(\.\/(.*?)\)/g, '![$1](./research_themes/$2)');
+
       const htmlContent = marked.parse(text);
 
       modalContent.innerHTML = `<div class="modal-body markdown-body">${htmlContent}</div>`;
