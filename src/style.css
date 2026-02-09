@@ -312,7 +312,7 @@ nav.scrolled {
 
 #news-tile {
   grid-column: span 4;
-  grid-row: span 3;
+  grid-row: span 4;
 }
 
 #research-tile {
