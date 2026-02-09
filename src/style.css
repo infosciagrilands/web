@@ -317,7 +317,7 @@ nav.scrolled {
 
 #research-tile {
   grid-column: span 8;
-  grid-row: span 5;
+  grid-row: span 3;
 }
 
 #team-tile {
