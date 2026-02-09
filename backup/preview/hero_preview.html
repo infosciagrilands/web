@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>InfoSciAgriLands | 名古屋大学 耕地情報利用研究室</title>
+  <meta name="description" content="名古屋大学大学院 生命農学研究科 耕地情報利用研究室 (InfoSciAgriLands)。情報科学と農学の融合による持続可能な農業。">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Noto+Sans+JP:wght@300;400;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="./src/style.css">
+</head>
+
+<body>
+  <nav id="navbar">
+    <div class="nav-container"
+      style="display: flex; justify-content: space-between; align-items: center; width: 100%; max-width: 1400px; margin: 0 auto;">
+      <div class="logo">
+        <span class="logo-accent">InfoSci</span>AgriLands
+      </div>
+      <ul class="nav-links">
+        <li><a href="#hero-tile">Home</a></li>
+        <li><a href="#research-tile">Research</a></li>
+        <li><a href="#team-tile">Team</a></li>
+        <li><a href="#publications-tile">Publications</a></li>
+        <li><a href="#gallery-tile">Gallery</a></li>
+        <li><a href="#contact-tile">Contact</a></li>
+      </ul>
+      <a href="#contact-tile" class="btn btn-primary"
+        style="padding: 0.6rem 1.5rem; font-size: 0.85rem; border: none;">Join Us</a>
+    </div>
+  </nav>
+
+  <main class="dashboard-grid">
+    <!-- Hero Tile -->
+    <section id="hero-tile" class="bento-item reveal active" style="position: relative; overflow: hidden;">
+      <div class="hero-bg">
+        <img src="./public/hero/hero_aerial.jpg" class="active" alt="Aerial Farm View">
+        <img src="./public/hero/hero_field.jpg" alt="Field Research">
+        <img src="./public/hero/hero_plants.jpg" alt="Research Plants">
+        <img src="./public/hero/nam_field.jpg" alt="NAM Field">
+        <img src="./public/hero/greenhouse_inside.jpg" alt="Greenhouse Inside">
+        <img src="./public/hero/lab_experiment.jpg" alt="Lab Experiment">
+        <img src="./public/hero/field_drone.jpg" alt="Field Drone">
+        <img src="./public/hero/field_work.jpg" alt="Field Work">
+        <img src="./public/hero/microscope.jpg" alt="Microscope">
+        <img src="./public/hero/togo_sign.jpg" alt="Togo Field Sign">
+        <img src="./public/hero/hero.jpg" alt="Hero Original">
+      </div>
+      <div class="hero-content"
+        style="position: relative; z-index: 2; width: 100%; height: 100%; display: flex; flex-direction: column; justify-content: center; align-items: flex-start; padding-left: max(2rem, 5vw);">
+
+        <div style="text-align: left;">
+          <h2
+            style="font-size: clamp(1rem, 2vw, 1.5rem); font-weight: 700; color: var(--accent); margin-bottom: 0.5rem; letter-spacing: 0.05em; text-shadow: 0 2px 4px rgba(0,0,0,0.8);">
+            農学と情報科学の融合
+          </h2>
+
+          <h1
+            style="font-size: clamp(1.8rem, 3.5vw, 2.5rem); font-weight: 800; color: white; margin: 0; line-height: 1.2; text-shadow: 0 2px 10px rgba(0,0,0,0.8);">
+            耕地情報利用研究室
+          </h1>
+        </div>
+      </div>
+    </section>
+
+    <!-- News & Updates Tile -->
+    <section id="news-tile" class="bento-item glass reveal">
+      <div class="bento-header">
+        <h2>Updates</h2>
+        <span class="badge"
+          style="background: var(--accent-glow); color: var(--accent); padding: 0.2rem 0.6rem; border-radius: 20px; font-size: 0.7rem; font-weight: 700;">LIVE</span>
+      </div>
+      <div class="bento-body">
+        <div class="news-list" style="display: flex; flex-direction: column; gap: 1.2rem;">
+          <div class="news-item" style="border-bottom: 1px solid var(--glass-border); padding-bottom: 0.8rem;">
+            <span style="font-size: 0.75rem; color: var(--accent); font-weight: 600;">2024.12.01</span>
+            <p style="font-size: 0.9rem; margin-top: 0.3rem;">2024年度の卒業論文・修士論文提出に向けた中間報告会を実施しました。</p>
+          </div>
+          <div class="news-item" style="border-bottom: 1px solid var(--glass-border); padding-bottom: 0.8rem;">
+            <span style="font-size: 0.75rem; color: var(--accent); font-weight: 600;">2024.10.15</span>
+            <p style="font-size: 0.9rem; margin-top: 0.3rem;">教員プロフィールを更新しました。詳細な研究活動を追加しています。</p>
+          </div>
+          <div class="news-item">
+            <span style="font-size: 0.75rem; color: var(--accent); font-weight: 600;">2024.09.20</span>
+            <p style="font-size: 0.9rem; margin-top: 0.3rem;">東郷フィールドでの実習写真をギャラリーに追加しました。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About / Mission Tile -->
+    <section id="about-tile" class="bento-item glass reveal">
+      <div class="bento-header">
+        <h2>Our Mission</h2>
+      </div>
+      <div class="bento-body">
+        <p style="font-size: 0.95rem; line-height: 1.6; color: var(--text-main);">
+          広大な東郷フィールドを舞台に、植物の生理・収量、土壌、気象など多種多様なデータを収集・解析。作物生産の向上と持続可能な農業の実現を目指す、農学と情報科学のフロンティアです。
+        </p>
+      </div>
+    </section>
+
+    <!-- Research Themes Tile -->
+    <section id="research-tile" class="bento-item glass reveal">
+      <div class="bento-header">
+        <h2>Research Themes</h2>
+        <span id="research-expand-text"
+          style="font-size: 0.8rem; color: var(--accent); cursor: pointer; border-bottom: 1px dotted var(--accent);">Click
+          to expand (+6)</span>
+      </div>
+      <div class="bento-body">
+        <!-- Dynamic Grid Container -->
+        <div id="research-grid" class="grid"
+          style="grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); min-height: 80px;">
+          <!-- Content will be loaded by JS -->
+        </div>
+        <div style="text-align: center; margin-top: 1rem;">
+          <button id="research-expand-btn" class="profile-link-badge"
+            style="cursor: pointer; background: transparent; font-size: 0.9rem;">全ての研究テーマを見る (+6)</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Team Tile -->
+    <section id="team-tile" class="bento-item glass reveal">
+      <div class="bento-header">
+        <h2>Members</h2>
+      </div>
+      <div class="bento-body">
+        <div style="display: flex; gap: 2rem; overflow-x: auto; padding-bottom: 1rem; scrollbar-width: thin;">
+          <!-- Professor Murase -->
+          <div class="member-card" style="flex: 0 0 250px; text-align: center; cursor: pointer;"
+            data-target="member-modal-murase">
+            <div
+              style="width: 100px; height: 100px; border-radius: 50%; margin: 0 auto 1rem; overflow: hidden; border: 3px solid var(--accent); position: relative;">
+              <img src="./public/members/murase_new.jpg" alt="村瀬 潤"
+                style="width: 100%; height: 100%; object-fit: cover;">
+            </div>
+            <h3 style="font-size: 1.1rem; margin-bottom: 0.2rem;">村瀬 潤</h3>
+            <p style="font-size: 0.85rem; color: var(--accent); margin-bottom: 0.5rem;">教授 / 博士(農学)</p>
+            <div style="display: flex; justify-content: center; gap: 0.5rem; font-size: 0.75rem;">
+              <span class="profile-link-badge">詳細を見る</span>
+            </div>
+          </div>
+          <!-- Assoc Prof Doi -->
+          <div class="member-card" style="flex: 0 0 250px; text-align: center; cursor: pointer;"
+            data-target="member-modal-doi">
+            <div
+              style="width: 100px; height: 100px; border-radius: 50%; margin: 0 auto 1rem; overflow: hidden; border: 3px solid var(--accent); position: relative;">
+              <img src="./public/members/doi.png" alt="土井 一行" style="width: 100%; height: 100%; object-fit: cover;">
+            </div>
+            <h3 style="font-size: 1.1rem; margin-bottom: 0.2rem;">土井 一行</h3>
+            <p style="font-size: 0.85rem; color: var(--accent); margin-bottom: 0.5rem;">准教授 / 博士(農学)</p>
+            <div style="display: flex; justify-content: center; gap: 0.5rem; font-size: 0.75rem;">
+              <span class="profile-link-badge">詳細を見る</span>
+            </div>
+          </div>
+          <!-- Assistant Prof Nishiuchi -->
+          <div class="member-card" style="flex: 0 0 250px; text-align: center; cursor: pointer;"
+            data-target="member-modal-nishiuchi">
+            <div
+              style="width: 100px; height: 100px; border-radius: 50%; margin: 0 auto 1rem; overflow: hidden; border: 3px solid var(--accent); position: relative;">
+              <img src="./public/members/nishiuchi.jpg" alt="西内 俊策"
+                style="width: 100%; height: 100%; object-fit: cover;">
+            </div>
+            <h3 style="font-size: 1.1rem; margin-bottom: 0.2rem;">西内 俊策</h3>
+            <p style="font-size: 0.85rem; color: var(--accent); margin-bottom: 0.5rem;">助教 / 博士(農学)</p>
+            <div style="display: flex; justify-content: center; gap: 0.5rem; font-size: 0.75rem;">
+              <span class="profile-link-badge">詳細を見る</span>
+            </div>
+          </div>
+          <!-- Students -->
+          <div class="member-card"
+            style="flex: 0 0 250px; display: flex; align-items: center; justify-content: center; background: var(--bg-subtle); border-radius: 16px; cursor: pointer;"
+            data-target="member-modal-students">
+            <div style="text-align: center;">
+              <p style="font-size: 1.2rem; font-weight: 700; color: var(--primary);">Members 2024</p>
+              <p style="font-size: 0.8rem; color: var(--text-dim);">Click for Details</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Publications Tile -->
+    <section id="publications-tile" class="bento-item glass reveal" style="cursor: pointer;"
+      data-target="publications-modal">
+      <div class="bento-header">
+        <h2>Selected Publications</h2>
+        <span class="profile-link-badge">全て見る ↗</span>
+      </div>
+      <div class="bento-body">
+        <ul style="list-style: none; display: flex; flex-direction: column; gap: 1rem;">
+          <li style="font-size: 0.9rem; border-left: 2px solid var(--accent); padding-left: 1rem;">
+            <strong>2024:</strong> Detection of QTLs regulating the second internode length in rice dwarf mutant d1.
+            (Breed. Sci.)
+          </li>
+          <li style="font-size: 0.9rem; border-left: 2px solid var(--accent); padding-left: 1rem;">
+            <strong>2024:</strong> Leaf Na+ effects and multi-trait GWAS point to salt exclusion... (Ann. Bot.)
+          </li>
+          <li style="font-size: 0.9rem; border-left: 2px solid var(--accent); padding-left: 1rem;">
+            <strong>2023:</strong> Contribution of genes related to grain number... (Plant Prod. Sci.)
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Gallery Tile -->
+    <section id="gallery-tile" class="bento-item glass reveal">
+      <div class="bento-header">
+        <h2>Gallery</h2>
+        <span id="gallery-expand-text"
+          style="font-size: 0.8rem; color: var(--accent); cursor: pointer; border-bottom: 1px dotted var(--accent);">Click
+          to expand (+6)</span>
+      </div>
+      <div class="bento-body">
+        <div id="gallery-grid" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.8rem; height: 100%;">
+          <!-- Content will be loaded by JS -->
+        </div>
+        <div style="text-align: center; margin-top: 1rem;">
+          <button id="gallery-expand-btn" class="profile-link-badge"
+            style="cursor: pointer; background: transparent; font-size: 0.9rem;">全ての写真を見る (+6)</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Q&A Tile -->
+    <section id="qa-tile" class="bento-item glass reveal">
+      <div class="bento-header">
+        <h2>Q&A</h2>
+      </div>
+      <div class="bento-body">
+        <details
+          style="margin-bottom: 0.5rem; border: 1px solid var(--glass-border); border-radius: 8px; padding: 0.5rem;">
+          <summary style="font-weight: 600; cursor: pointer; outline: none; font-size: 0.9rem;">どんなことが学べますか？</summary>
+          <p style="font-size: 0.85rem; margin-top: 0.5rem; color: var(--text-dim);">
+            育種・栽培・土壌の三つの切り口から、情報科学を用いた最新の研究手法を学べます。</p>
+        </details>
+        <details style="border: 1px solid var(--glass-border); border-radius: 8px; padding: 0.5rem;">
+          <summary style="font-weight: 600; cursor: pointer; outline: none; font-size: 0.9rem;">卒業後の進路は？</summary>
+          <p style="font-size: 0.85rem; margin-top: 0.5rem; color: var(--text-dim);">
+            大学院進学のほか、公務員、農業関連企業、IT、食品メーカーなど多岐にわたります。</p>
+        </details>
+      </div>
+    </section>
+
+    <!-- Contact Tile -->
+    <section id="contact-tile" class="bento-item glass reveal">
+      <div class="bento-header">
+        <h2>Contact</h2>
+      </div>
+      <div class="bento-body" style="display: flex; justify-content: space-between; align-items: center;">
+        <div>
+          <p style="font-size: 0.9rem;">〒470-0151 愛知県東郷町大字諸輪字畑尻94</p>
+          <p style="font-size: 0.9rem; font-weight: 700; margin-top: 0.3rem;">名古屋大学 東郷フィールド</p>
+        </div>
+        <a href="mailto:example@nagoya-u.jp" class="btn btn-primary" style="padding: 0.8rem 2rem; border: none;">Contact
+          Lab</a>
+      </div>
+    </section>
+  </main>
+
+  <footer style="margin-top: 4rem; padding: 4rem 2rem; background: var(--primary); color: white; text-align: center;">
+    <p style="font-size: 0.9rem;">&copy; 2024 Laboratory of Information Sciences in Agricultural Lands. 名古屋大学 耕地情報利用研究室
+    </p>
+  </footer>
+
+  <script type="module" src="./src/main.js"></script>
+
+  <!-- Research Detail Modals -->
+  <div id="modal-overlay" class="modal-overlay">
+    <div class="modal">
+      <button class="modal-close">&times;</button>
+      <div id="modal-content" class="modal-content"></div>
+    </div>
+  </div>
+
+  <template id="member-modal-murase">
+    <div class="modal-header">
+      <div
+        style="height: 200px; background: var(--bg-subtle); display: flex; align-items: center; justify-content: center;">
+        <img src="./members/murase_new.jpg" alt="Prof Murase"
+          style="width: 150px; height: 150px; border-radius: 50%; border: 4px solid var(--accent); object-fit: cover;">
+      </div>
+      <h2>村瀬 潤 (Prof. Jun Murase)</h2>
+    </div>
+    <div class="modal-body">
+      <h3>研究興味</h3>
+      <p>土壌微生物学、特に原生生物の多様性と機能。植物根圏における微生物生態学。水田など湿地土壌におけるメタン代謝に関与する微生物の生態。</p>
+      <h3>自己紹介・メッセージ</h3>
+      <p>学生の頃からお世話になっている東郷フィールドに、2019年から教員としてお世話になることになりました。車で通勤しています。フィールドに近いこと、国際色豊かなことが自慢です。</p>
+      <p><strong>趣味:</strong> 弓道<br><strong>推しイネ:</strong> KDML105（香り米）</p>
+      <div style="margin-top: 2rem;">
+        <a href="https://researchmap.jp/read0048563" target="_blank" class="profile-link">researchmap</a>
+        <a href="https://orcid.org/0000-0002-3932-8321" target="_blank" class="profile-link">ORCID</a>
+      </div>
+    </div>
+  </template>
+
+  <template id="member-modal-doi">
+    <div class="modal-header">
+      <div
+        style="height: 200px; background: var(--bg-subtle); display: flex; align-items: center; justify-content: center;">
+        <img src="./members/doi.png" alt="Assoc. Prof. Doi"
+          style="width: 150px; height: 150px; border-radius: 50%; border: 4px solid var(--accent); object-fit: cover;">
+      </div>
+      <h2>土井 一行 (Assoc. Prof. Kazuyuki Doi)</h2>
+    </div>
+    <div class="modal-body">
+      <h3>研究興味</h3>
+      <p>イネの遺伝解析。最近は実用形質の評価法の自動化など。</p>
+      <h3>自己紹介・メッセージ</h3>
+      <p>「自分の研究ができる幸せ。でも世の中は広い。頑張らねば。」<br>東郷フィールドには、イネだけじゃなく、野菜も家畜もいます。ここでの経験は貴重です。研究室の雰囲気は「自由」です。</p>
+      <p><strong>趣味:</strong> 研究（といいたいところですが釣りです）<br><strong>推しイネ:</strong> カルローズ、日本晴</p>
+      <div style="margin-top: 2rem;">
+        <a href="https://profs.provost.nagoya-u.ac.jp/html/100003859_ja.html" target="_blank"
+          class="profile-link">名大DB</a>
+        <a href="https://scholar.google.co.jp/citations?hl=ja&user=uMtSOzAAAAAJ" target="_blank"
+          class="profile-link">Scholar</a>
+      </div>
+    </div>
+  </template>
+
+  <template id="member-modal-nishiuchi">
+    <div class="modal-header">
+      <div
+        style="height: 200px; background: var(--bg-subtle); display: flex; align-items: center; justify-content: center;">
+        <img src="./members/nishiuchi.jpg" alt="Assist. Prof. Nishiuchi"
+          style="width: 150px; height: 150px; border-radius: 50%; border: 4px solid var(--accent); object-fit: cover;">
+      </div>
+      <h2>西内 俊策 (Assist. Prof. Shunsaku Nishiuchi)</h2>
+    </div>
+    <div class="modal-body">
+      <h3>研究興味</h3>
+      <p>栽培履歴に基づいた作物栽培における意思決定支援。リモートセンシング技術と育種・生産現場の橋渡し。農業現場における画像解析・機械学習を用いたスマート農業技術基盤の開発。</p>
+      <h3>自己紹介・メッセージ</h3>
+      <p>変化の激しい農業の時代において、新しい技術や理論を積極的に取り入れ、学術的な問いと社会的なニーズの両方に応えることを目指しています。フィールドを使ってデータを出し、仮説を検証できる自由な環境が魅力です。</p>
+      <p><strong>趣味:</strong> 釣り（あまり行けていませんが）</p>
+      <div style="margin-top: 2rem;">
+        <a href="https://researchmap.jp/Nishiuchi_Shunsaku" target="_blank" class="profile-link">researchmap</a>
+        <a href="https://orcid.org/0000-0003-4916-291X" target="_blank" class="profile-link">ORCID</a>
+      </div>
+    </div>
+  </template>
+
+  <template id="member-modal-students">
+    <div class="modal-header">
+      <div
+        style="height: 150px; background: var(--bg-subtle); display: flex; align-items: center; justify-content: center;">
+        <h2 style="margin: 0; color: var(--accent);">Student Members (2024)</h2>
+      </div>
+    </div>
+    <div class="modal-body">
+      <div style="display: grid; gap: 1.5rem;">
+        <div style="background: var(--bg-subtle); padding: 1.5rem; border-radius: 12px;">
+          <h3 style="color: var(--primary-light); margin-bottom: 0.5rem;">Doctoral Course (博士課程)</h3>
+          <p style="font-size: 1.2rem; font-weight: bold;">3名</p>
+          <p style="font-size: 0.9rem; color: var(--text-dim);">留学生: ミャンマー / 国内進学</p>
+        </div>
+        <div style="background: var(--bg-subtle); padding: 1.5rem; border-radius: 12px;">
+          <h3 style="color: var(--primary-light); margin-bottom: 0.5rem;">Master's Course (修士課程)</h3>
+          <p style="font-size: 1.2rem; font-weight: bold;">11名</p>
+          <p style="font-size: 0.9rem; color: var(--text-dim);">留学生: インドネシア, 中国 / 国内進学</p>
+        </div>
+        <div style="background: var(--bg-subtle); padding: 1.5rem; border-radius: 12px;">
+          <h3 style="color: var(--primary-light); margin-bottom: 0.5rem;">Undergraduate (学部生)</h3>
+          <p style="font-size: 1.2rem; font-weight: bold;">4名</p>
+        </div>
+      </div>
+    </div>
+  </template>
+  <template id="publications-modal">
+    <div class="modal-header">
+      <div
+        style="height: 100px; width: 100px; background: var(--bg-subtle); display: flex; align-items: center; justify-content: center; border-radius: 16px; margin-right: 1.5rem;">
+        <span style="font-size: 2.5rem;">📄</span>
+      </div>
+      <h2>Full Publications List</h2>
+    </div>
+    <div class="modal-body">
+      <h3>Original Papers (Selected)</h3>
+      <ul style="list-style: none; display: flex; flex-direction: column; gap: 1.5rem; padding-left: 0;">
+        <!-- 2024 -->
+        <li style="padding-bottom: 1rem; border-bottom: 1px solid var(--glass-border);">
+          <div style="font-weight: 700; color: var(--accent); margin-bottom: 0.2rem;">2024</div>
+          <div style="font-weight: 600; margin-bottom: 0.3rem;">Detection of QTLs regulating the second internode
+            length in rice dwarf mutant d1.</div>
+          <div style="font-size: 0.9rem; color: var (--text-dim);">Ha, Q.T., et al. <br><em>Breed. Sci.</em> 74:
+            443-453.</div>
+        </li>
+        <li style="padding-bottom: 1rem; border-bottom: 1px solid var(--glass-border);">
+          <div style="font-weight: 700; color: var(--accent); margin-bottom: 0.2rem;">2024</div>
+          <div style="font-weight: 600; margin-bottom: 0.3rem;">Leaf Na+ effects and multi-trait GWAS point to salt
+            exclusion as the key mechanism for reproductive stage salinity tolerance in rice.</div>
+          <div style="font-size: 0.9rem; color: var (--text-dim);">de Ocampo, M.P., et al. <br><em>Ann. Bot.</em>
+            mcae227.</div>
+        </li>
+        <li style="padding-bottom: 1rem; border-bottom: 1px solid var(--glass-border);">
+          <div style="font-weight: 700; color: var(--accent); margin-bottom: 0.2rem;">2024</div>
+          <div style="font-weight: 600; margin-bottom: 0.3rem;">Evaluation of grain-filling-related traits using
+            Taichung 65 x DV85 chromosome segment substitution lines (TD-CSSLs) of rice.</div>
+          <div style="font-size: 0.9rem; color: var (--text-dim);">Mabreja, A.D., et al. <br><em>Plants</em> 13: 289.
+          </div>
+        </li>
+
+        <!-- 2023 -->
+        <li style="padding-bottom: 1rem; border-bottom: 1px solid var(--glass-border);">
+          <div style="font-weight: 700; color: var(--accent); margin-bottom: 0.2rem;">2023</div>
+          <div style="font-weight: 600; margin-bottom: 0.3rem;">Contribution of genes related to grain number (Gn1a and
+            WFP) introgressed into NERICA 1 to grain yield under tropical highland conditions in central Kenya.</div>
+          <div style="font-size: 0.9rem; color: var (--text-dim);">Kikuta, M., et al. <br><em>Plant Prod. Sci.</em> 26:
+            309-319.</div>
+        </li>
+        <li style="padding-bottom: 1rem; border-bottom: 1px solid var(--glass-border);">
+          <div style="font-weight: 700; color: var(--accent); margin-bottom: 0.2rem;">2023</div>
+          <div style="font-weight: 600; margin-bottom: 0.3rem;">Genetic variation of blast (Pyricularia oryzae Cavara)
+            resistance in the Longistaminata chromosome segment introgression lines (LCSILs) and potential for breeding
+            use in Kenya.</div>
+          <div style="font-size: 0.9rem; color: var (--text-dim);">Tomita, R., et al. <br><em>Plants</em> 12: 863.
+          </div>
+        </li>
+
+        <!-- 2022 -->
+        <li style="padding-bottom: 1rem; border-bottom: 1px solid var(--glass-border);">
+          <div style="font-weight: 700; color: var(--accent); margin-bottom: 0.2rem;">2022</div>
+          <div style="font-weight: 600; margin-bottom: 0.3rem;">[Review] Utilization of genotyping-by-sequencing (GBS)
+            for rice pre-breeding and improvement: A review.</div>
+          <div style="font-size: 0.9rem; color: var (--text-dim);">Reyes, V.P., et al. <br><em>Life</em> 12: 1752.
+          </div>
+        </li>
+        <li style="padding-bottom: 1rem; border-bottom: 1px solid var(--glass-border);">
+          <div style="font-weight: 700; color: var(--accent); margin-bottom: 0.2rem;">2022</div>
+          <div style="font-weight: 600; margin-bottom: 0.3rem;">Estimating yield-related traits using UAV-derived
+            multispectral images to improve rice grain yield prediction.</div>
+          <div style="font-size: 0.9rem; color: var (--text-dim);">Bascon, M.V., et al. <br><em>Agriculture</em> 12:
+            1141.</div>
+        </li>
+      </ul>
+
+      <h3 style="margin-top: 2rem;">Conference Presentations (FY2021 Selected)</h3>
+      <ul style="list-style: none; display: flex; flex-direction: column; gap: 1rem; padding-left: 0;">
+        <li style="font-size: 0.9rem;">
+          <span style="color: var(--accent); font-weight: 600;">天野真宏 他:</span>
+          異なる水稲栽培品種の根圏微生物群集の施肥に対する応答 (日本土壌肥料学会2021年度北海道大会)
+        </li>
+        <li style="font-size: 0.9rem;">
+          <span style="color: var(--accent); font-weight: 600;">髙田樹 他:</span>
+          衛星リモートセンシングを用いた茎立期におけるコムギのNDVI変化の予測 (日本育種学会 第141回講演会)
+        </li>
+        <li style="font-size: 0.9rem;">
+          <span style="color: var(--accent); font-weight: 600;">中田智大 他:</span>
+          UAVリモートセンシングによる高収量性ソルガムのバイオマス推定技術の開発 (日本育種学会 第141回講演会)
+        </li>
+      </ul>
+
+      <p style="margin-top: 2rem; font-size: 0.8rem; color: var(--text-dim); text-align: center;">... and more
+        publications from 2011-2021 available in archive.</p>
+    </div>
+  </template>
+  <script>
+    // Inline script for hero slideshow in preview mode
+    (function () {
+      const heroImages = document.querySelectorAll('.hero-bg img');
+      if (heroImages.length > 0) {
+        let currentHeroIndex = 0;
+        setInterval(() => {
+          heroImages[currentHeroIndex].classList.remove('active');
+          currentHeroIndex = (currentHeroIndex + 1) % heroImages.length;
+          heroImages[currentHeroIndex].classList.add('active');
+        }, 5000);
+      }
+    })();
+  </script>
+</body>
+
+</html>

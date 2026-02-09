@@ -67,70 +67,72 @@ window.addEventListener('scroll', () => {
 });
 
 // --- Dynamic Research Themes Logic ---
+const BASE_URL = import.meta.env.BASE_URL;
+
 const researchThemes = [
   {
     id: 'research-modal-1',
     title: 'イネ遺伝解析・QTL探索',
     desc: '多様な遺伝資源と統計手法を用いた、次世代のイネ育種基盤の開発。',
-    img: './research_themes/crossing.jpg',
-    mdFile: './research_themes/crossing.md'
+    img: `${BASE_URL}research_themes/crossing.jpg`,
+    mdFile: `${BASE_URL}research_themes/crossing.md`
   },
   {
     id: 'research-modal-2',
     title: 'イネNAM集団の構築',
     desc: '複雑な農業形質の遺伝背景を解明する、大規模かつ精密な集団解析。',
-    img: './research_themes/nam.jpg',
-    mdFile: './research_themes/nam.md'
+    img: `${BASE_URL}research_themes/nam.jpg`,
+    mdFile: `${BASE_URL}research_themes/nam.md`
 
   },
   {
     id: 'research-modal-3',
     title: 'スマート農業・センシング',
     desc: 'ドローンやICTを用いた、環境と植物生体情報のリアルタイム計測。',
-    img: './research_themes/sorghambiomass.jpg',
-    mdFile: './research_themes/sorghambiomass.md'
+    img: `${BASE_URL}research_themes/sorghambiomass.jpg`,
+    mdFile: `${BASE_URL}research_themes/sorghambiomass.md`
   },
   {
     id: 'research-modal-4',
     title: '土壌原生生物の機能',
     desc: '土壌生態系のキーストーン「捕食性原生生物」の多様性と役割。',
-    img: './research_themes/rhizo_diversity.jpg',
-    mdFile: './research_themes/rhizo_diversity.md'
+    img: `${BASE_URL}research_themes/rhizo_diversity.jpg`,
+    mdFile: `${BASE_URL}research_themes/rhizo_diversity.md`
   },
   {
     id: 'research-modal-5',
     title: '根圏微生物食物連鎖',
     desc: 'イネの遺伝型が支配する、根圏微生物コミュニティの構造と機能。',
-    img: './research_themes/rhizosphere.png',
-    mdFile: './research_themes/rhizosphere.md'
+    img: `${BASE_URL}research_themes/rhizosphere.png`,
+    mdFile: `${BASE_URL}research_themes/rhizosphere.md`
   },
   {
     id: 'research-modal-6',
     title: 'データ駆動型作物モデル',
     desc: 'センシングデータと生育シミュレーションの融合による予測技術。',
-    img: './research_themes/datadriven.png',
-    mdFile: './research_themes/datadriven.md'
+    img: `${BASE_URL}research_themes/datadriven.png`,
+    mdFile: `${BASE_URL}research_themes/datadriven.md`
   },
   {
     id: 'research-modal-7',
     title: '水田土壌の物質循環',
     desc: '酸化還元境界層における微生物動態と温室効果ガス代謝の解明。',
-    img: './research_themes/o2dist.png',
-    mdFile: './research_themes/o2dist.md'
+    img: `${BASE_URL}research_themes/o2dist.png`,
+    mdFile: `${BASE_URL}research_themes/o2dist.md`
   },
   {
     id: 'research-modal-8',
     title: 'イネ登熟の遺伝解析',
     desc: '多収化に伴う登熟不良を改善する有用遺伝子の探索。',
-    img: './research_themes/toujuku.jpg',
-    mdFile: './research_themes/toujuku.md'
+    img: `${BASE_URL}research_themes/toujuku.jpg`,
+    mdFile: `${BASE_URL}research_themes/toujuku.md`
   },
   {
     id: 'research-modal-9',
     title: 'WISHプロジェクト',
     desc: '名古屋大学発の「世界の稲作をよくする」プロジェクトへの参画。',
-    img: './research_themes/wish.jpg',
-    mdFile: './research_themes/wish.md'
+    img: `${BASE_URL}research_themes/wish.jpg`,
+    mdFile: `${BASE_URL}research_themes/wish.md`
   }
 ];
 
@@ -298,39 +300,43 @@ if (researchGrid && expandBtn) {
 
 // --- Gallery Logic ---
 const galleryImages = [
-  './gallery/gallery_field_1.jpg',
-  './gallery/gallery_field_2.jpg',
-  './gallery/gallery_research.jpg',
-  './gallery/gallery_drone.jpg',
-  './gallery/gallery_plants_1.jpg',
-  './gallery/gallery_harvest.jpg',
-  './gallery/gallery_harvest_2.jpg',
-  './gallery/gallery_lecture.jpg',
-  './gallery/gallery_poster.jpg',
-  './gallery/gallery_group.jpg',
-  './gallery/gallery_landscape.jpg',
-  './gallery/gallery_misc_1.jpg',
-  './gallery/gallery_misc_2.jpg',
-  './gallery/gallery_misc_3.jpg',
-  './gallery/gallery_misc_4.jpg',
-  './gallery/gallery_misc_5.jpg',
-  './gallery/gallery_misc_6.jpg',
-  './gallery/gallery_misc_7.jpg',
-  './gallery/gallery_misc_8.jpg',
-  './gallery/gallery_misc_9.jpg',
-  './gallery/gallery_misc_10.jpg',
-  './gallery/gallery_misc_11.jpg',
-  './gallery/gallery_misc_12.jpg',
-  './gallery/gallery_misc_13.jpg',
-  './gallery/gallery_misc_14.jpg',
-  './gallery/gallery_misc_15.jpg',
-  './gallery/gallery_misc_16.jpg',
-  './gallery/gallery_misc_17.jpg',
-  './gallery/gallery_misc_18.jpg',
-  './gallery/gallery_misc_19.jpg',
-  './gallery/gallery_misc_20.jpg',
-  './hero/hero_aerial.jpg'
-];
+  'gallery/gallery_field_1.jpg',
+  'gallery/gallery_field_2.jpg',
+  'gallery/gallery_research.jpg',
+  'gallery/gallery_drone.jpg',
+  'gallery/gallery_plants_1.jpg',
+  'gallery/gallery_harvest.jpg',
+  'gallery/gallery_harvest_2.jpg',
+  'gallery/gallery_lecture.jpg',
+  'gallery/gallery_poster.jpg',
+  'gallery/gallery_group.jpg',
+  'gallery/gallery_landscape.jpg',
+  'gallery/gallery_misc_1.jpg',
+  'gallery/gallery_misc_2.jpg',
+  'gallery/gallery_misc_3.jpg',
+  'gallery/gallery_misc_4.jpg',
+  'gallery/gallery_misc_5.jpg',
+  'gallery/gallery_misc_6.jpg',
+  'gallery/gallery_misc_7.jpg',
+  'gallery/gallery_misc_8.jpg',
+  'gallery/gallery_misc_9.jpg',
+  'gallery/gallery_misc_10.jpg',
+  'gallery/gallery_misc_11.jpg',
+  'gallery/gallery_misc_12.jpg',
+  'gallery/gallery_misc_13.jpg',
+  'gallery/gallery_misc_14.jpg',
+  'gallery/gallery_misc_15.jpg',
+  'gallery/gallery_misc_16.jpg',
+  'gallery/gallery_misc_17.jpg',
+  'gallery/gallery_misc_18.jpg',
+  'gallery/gallery_misc_19.jpg',
+  'gallery/gallery_misc_20.jpg',
+  'gallery/gallery_misc_21.jpg',
+  'gallery/gallery_misc_22.jpg',
+  'gallery/gallery_misc_23.jpg',
+  'gallery/gallery_misc_24.jpg',
+  'gallery/gallery_misc_25.jpg'
+].map(path => BASE_URL + path);
 
 const galleryGrid = document.getElementById('gallery-grid');
 const galleryExpandBtn = document.getElementById('gallery-expand-btn');
