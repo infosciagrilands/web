@@ -305,14 +305,14 @@ nav.scrolled {
   grid-row: span 3;
 }
 
-#news-tile {
-  grid-column: span 4;
-  grid-row: span 3;
-}
-
 #about-tile {
   grid-column: span 4;
   grid-row: span 2;
+}
+
+#news-tile {
+  grid-column: span 4;
+  grid-row: span 3;
 }
 
 #research-tile {
