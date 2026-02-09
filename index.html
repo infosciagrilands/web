@@ -82,37 +82,15 @@
 
     <!-- News & Updates Tile (Twitter) -->
     <section id="news-tile" class="bento-item glass reveal" style="padding: 0; min-height: 400px;">
-      <div class="bento-header">
-        <h2>News & Updates</h2>
-      </div>
-      <div class="bento-body" style="display: flex; flex-direction: column; height: 100%;">
-        <ul style="list-style: none; padding: 0; margin-bottom: 2rem; flex-grow: 1;">
-          <li style="margin-bottom: 1rem; border-bottom: 1px solid var(--glass-border); padding-bottom: 0.5rem;">
-            <span
-              style="font-size: 0.8rem; color: var(--accent); display: block; margin-bottom: 0.2rem;">2025-02-10</span>
-            旧サイトは<a href="https://togokeisoku7.wixsite.com/infosciagrilands" target="_blank"
-              style="text-decoration: underline; color: var(--primary-light);">こちら</a>
-          </li>
-          <li style="margin-bottom: 1rem; border-bottom: 1px solid var(--glass-border); padding-bottom: 0.5rem;">
-            <span
-              style="font-size: 0.8rem; color: var(--accent); display: block; margin-bottom: 0.2rem;">2025-02-10</span>
-            サイトリニューアル中です
-          </li>
-          <li style="margin-bottom: 1rem; border-bottom: 1px solid var(--glass-border); padding-bottom: 0.5rem;">
-            <span
-              style="font-size: 0.8rem; color: var(--accent); display: block; margin-bottom: 0.2rem;">2025-02-09</span>
-            卒論〆切でした
-          </li>
-        </ul>
-        <div style="text-align: center; margin-top: auto;">
-          <a href="https://twitter.com/infosciagri" target="_blank" class="btn btn-primary"
-            style="font-size: 0.9rem; padding: 0.6rem 1.5rem; display: inline-flex; align-items: center; gap: 0.5rem;">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-              <path
-                d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865l8.875 11.633Z" />
-            </svg>
-            Follow on X
-          </a>
+      <div id="fb-root"></div>
+      <script async defer crossorigin="anonymous"
+        src="https://connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v24.0&appId=APP_ID"></script>
+      <div style="height: 100%; overflow: hidden; border-radius: 20px;">
+        <div class="fb-page" data-href="https://www.facebook.com/facebook" data-tabs="timeline" data-width="500"
+          data-height="600" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false"
+          data-show-facepile="true">
+          <blockquote cite="https://www.facebook.com/facebook" class="fb-xfbml-parse-ignore"><a
+              href="https://www.facebook.com/facebook">Facebook</a></blockquote>
         </div>
       </div>
     </section>
