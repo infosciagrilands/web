@@ -330,12 +330,7 @@ const galleryImages = [
   'gallery/gallery_misc_17.jpg',
   'gallery/gallery_misc_18.jpg',
   'gallery/gallery_misc_19.jpg',
-  'gallery/gallery_misc_20.jpg',
-  'gallery/gallery_misc_21.jpg',
-  'gallery/gallery_misc_22.jpg',
-  'gallery/gallery_misc_23.jpg',
-  'gallery/gallery_misc_24.jpg',
-  'gallery/gallery_misc_25.jpg'
+  'gallery/gallery_misc_20.jpg'
 ].map(path => BASE_URL + path);
 
 const galleryGrid = document.getElementById('gallery-grid');
