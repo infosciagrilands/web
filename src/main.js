@@ -72,15 +72,15 @@ const BASE_URL = import.meta.env.BASE_URL;
 const researchThemes = [
   {
     id: 'research-modal-1',
-    title: 'イネ遺伝解析・QTL探索',
-    desc: '多様な遺伝資源と統計手法を用いた、次世代のイネ育種基盤の開発。',
+    title: 'イネ遺伝解析材料・育種素材',
+    desc: '多様な遺伝資源を用いた遺伝解析材料および育種素材の開発。',
     img: `${BASE_URL}research_themes/crossing.jpg`,
     mdFile: `${BASE_URL}research_themes/crossing.md`
   },
   {
     id: 'research-modal-2',
-    title: 'イネNAM集団の構築',
-    desc: '複雑な農業形質の遺伝背景を解明する、大規模かつ精密な集団解析。',
+    title: 'イネNAM集団の作出と利用',
+    desc: '複雑な農業形質の遺伝構造を解明する、大規模かつ精密な遺伝解析。',
     img: `${BASE_URL}research_themes/nam.jpg`,
     mdFile: `${BASE_URL}research_themes/nam.md`
 
