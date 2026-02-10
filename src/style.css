@@ -811,6 +811,38 @@ footer {
   font-size: 1.1rem;
 }
 
+.modal-body a {
+  color: var(--accent);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  transition: all 0.3s ease;
+  font-weight: 600;
+}
+
+.modal-body a:hover {
+  color: white;
+  text-shadow: 0 0 8px var(--accent-glow);
+}
+
+.modal-body a.btn-link {
+  display: inline-block;
+  padding: 0.6rem 1.2rem;
+  background: var(--accent-dark);
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  margin: 0.5rem 0;
+  font-size: 0.9rem;
+  font-weight: 700;
+  box-shadow: 0 4px 15px var(--accent-glow);
+}
+
+.modal-body a.btn-link:hover {
+  transform: translateY(-2px);
+  background: var(--accent);
+  box-shadow: 0 6px 20px var(--accent-glow);
+}
+
 .modal-body p {
   margin-bottom: 1.5rem;
 }
