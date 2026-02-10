@@ -136,8 +136,8 @@ const researchThemes = [
   },
   {
     id: 'research-modal-10',
-    title: 'GBS（解析受託・共同研究）',
-    desc: '大量サンプル（>2000）を低コストで解析する、独自解析パイプラインの運用。',
+    title: 'Genotyping by sequencing',
+    desc: '大量サンプル（>2000）を低コストで解析する。',
     img: `${BASE_URL}research_themes/gbs.png`,
     mdFile: `${BASE_URL}research_themes/gbs.md`
   }
