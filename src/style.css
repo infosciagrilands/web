@@ -15,11 +15,11 @@
   --bg-main: #052e16;
   --bg-subtle: #064020;
 
-  /* REAL WATER DROPLET GLASS VARIABLES */
-  --glass: rgba(255, 255, 255, 0.05);
-  /* Very transparent */
-  --glass-border: rgba(255, 255, 255, 0.3);
-  --glass-highlight: rgba(255, 255, 255, 0.5);
+  /* REAL WATER DROPLET GLASS VARIABLES - Ultra Transparent */
+  --glass: rgba(255, 255, 255, 0.02);
+  /* Optimized at 2% */
+  --glass-border: rgba(255, 255, 255, 0.4);
+  --glass-highlight: rgba(255, 255, 255, 0.6);
   --shadow-glass:
     0 20px 50px -10px rgba(0, 0, 0, 0.7),
     0 0 15px rgba(255, 255, 255, 0.1),
