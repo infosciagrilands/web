@@ -165,7 +165,13 @@ async function openModal(targetId) {
         return `![${p1}](${baseUrl}research_themes/${p2})`;
       });
 
-      const htmlContent = marked.parse(text);
+      // Custom renderer to open links in new window
+      const renderer = new marked.Renderer();
+      renderer.link = ({ href, title, text }) => {
+        return `<a href="${href}" ${title ? `title="${title}"` : ''} target="_blank" rel="noopener noreferrer">${text}</a>`;
+      };
+
+      const htmlContent = marked.parse(text, { renderer });
 
       modalContent.innerHTML = `<div class="modal-body markdown-body">${htmlContent}</div>`;
     } catch (error) {
