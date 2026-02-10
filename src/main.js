@@ -137,7 +137,7 @@ const researchThemes = [
   {
     id: 'research-modal-10',
     title: 'Genotyping by sequencing',
-    desc: '大量サンプル（>2000）を低コストで解析する。',
+    desc: '大規模集団（>2000個体）のDNAを低コストで解析する。',
     img: `${BASE_URL}research_themes/gbs.jpg`,
     mdFile: `${BASE_URL}research_themes/gbs.md`
   }
