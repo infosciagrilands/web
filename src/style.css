@@ -668,6 +668,23 @@ footer {
   #research-grid {
     grid-template-columns: 1fr !important;
   }
+
+  /* Force members to show all in a grid on mobile */
+  #members-container {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)) !important;
+    overflow-x: visible !important;
+    gap: 1.5rem !important;
+  }
+
+  #members-container .member-card {
+    flex: auto !important;
+    width: auto !important;
+  }
+
+  #members-expand-btn {
+    display: none !important;
+  }
 }
 
 .profile-link {
