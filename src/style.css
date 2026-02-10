@@ -103,8 +103,8 @@ ul {
 /* Water Droplet Glassmorphism Style */
 .glass {
   background: var(--glass);
-  backdrop-filter: blur(24px) saturate(200%);
-  -webkit-backdrop-filter: blur(24px) saturate(200%);
+  backdrop-filter: blur(10px) saturate(180%);
+  -webkit-backdrop-filter: blur(10px) saturate(180%);
   border: 1px solid var(--glass-border);
   box-shadow:
     var(--shadow-glass),
