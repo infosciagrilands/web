@@ -1,55 +1,43 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap');
 
 :root {
-  /* Default (Light/Base Mode) - Deep Forest Green & Gold */
+  /* Organic Leaf Theme - Vibrant Deep Green & Pure Water */
   --primary: #f0fdf4;
-  /* Main headings - Very light mint/white */
   --primary-light: #dcfce7;
-  /* Lighter accents */
-  --accent: #fbbf24;
-  /* Amber/Gold for key highlights */
-  --accent-glow: rgba(251, 191, 36, 0.4);
-  --accent-dark: #f59e0b;
-  /* Darker amber for buttons */
+  --accent: #34d399;
+  /* Refreshing Emerald */
+  --accent-glow: rgba(52, 211, 153, 0.4);
+  --accent-dark: #059669;
 
-  --text-main: #e2e8f0;
-  /* Main text - Soft white/grey for readability on dark */
+  --text-main: #f8fafc;
   --text-dim: #94a3b8;
-  /* Secondary text - Muted blue-grey */
 
   --bg-main: #052e16;
-  /* Deep Forest Green (Background) */
+  /* Original Vibrant Deep Green */
   --bg-subtle: #064020;
-  /* Slightly lighter green for cards */
 
-  /* TRENDY GLASS VARIABLES */
-  --glass: rgba(255, 255, 255, 0.03);
-  /* Very subtle crystalline fill */
-  --glass-border: rgba(255, 255, 255, 0.08);
-  --glass-highlight: rgba(255, 255, 255, 0.15);
-  /* Top/Left highlight */
-  --shadow-glass: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+  /* WATER DROPLET GLASS VARIABLES - Glowing & Whiter */
+  --glass: rgba(255, 255, 255, 0.12);
+  /* Increased whiteness */
+  --glass-border: rgba(255, 255, 255, 0.4);
+  --glass-highlight: rgba(255, 255, 255, 0.7);
+  --shadow-glass:
+    0 20px 50px -10px rgba(0, 0, 0, 0.6),
+    0 0 20px rgba(255, 255, 255, 0.1),
+    /* Outer Glow */
+    inset 0 1px 2px rgba(255, 255, 255, 0.4);
 
-  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.3);
-  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -2px rgba(0, 0, 0, 0.3);
-  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.4), 0 4px 6px -4px rgba(0, 0, 0, 0.4);
-  --transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  --shadow-sm: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 10px 15px -3px rgba(0, 0, 0, 0.2);
+  --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.3);
+  --transition: all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
-/* Force consistency across modes for this specific theme request */
 @media (prefers-color-scheme: dark) {
   :root {
-    --primary: #f0fdf4;
-    --primary-light: #dcfce7;
-    --accent: #fbbf24;
-    --accent-glow: rgba(251, 191, 36, 0.4);
-    --accent-dark: #f59e0b;
-    --text-main: #e2e8f0;
-    --text-dim: #94a3b8;
-    --bg-main: #052e16;
-    --bg-subtle: #14532d;
-    --glass: rgba(5, 46, 22, 0.7);
-    --glass-border: rgba(255, 255, 255, 0.15);
+    --bg-main: #010a05;
+    --bg-subtle: #052e16;
+    --glass: rgba(255, 255, 255, 0.03);
   }
 }
 
@@ -57,6 +45,37 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* Detailed Shaded Monocot Vein Pattern */
+  background:
+    /* Fine bright lines with shadow for depth */
+    repeating-linear-gradient(90deg,
+      transparent 0px,
+      transparent 9px,
+      rgba(0, 0, 0, 0.3) 10px,
+      /* Shading */
+      var(--accent) 11px,
+      /* Bright line */
+      transparent 12px,
+      transparent 20px),
+    /* Secondary subtle veins */
+    repeating-linear-gradient(90deg,
+      transparent 0px,
+      rgba(255, 255, 255, 0.05) 1px,
+      transparent 2px,
+      transparent 4px);
+  pointer-events: none;
+  z-index: -1;
+  opacity: 0.25;
+  /* Subtle but distinct */
 }
 
 img {
@@ -68,14 +87,17 @@ img {
 body {
   font-family: 'Outfit', 'Noto Sans JP', sans-serif;
   background-color: var(--bg-main);
-  /* Rich Organic Gradient Background for Glass Effect */
-  background-image: radial-gradient(circle at 10% 20%, #114a2c 0%, #052e16 40%, #02120b 90%);
+  /* Vibrant Organic Leaf Vein Background */
+  background-image:
+    radial-gradient(circle at 50% -20%, #114a2c 0%, transparent 60%),
+    radial-gradient(circle at 10% 20%, #114a2c 0%, #052e16 40%, #010a05 90%),
+    repeating-linear-gradient(120deg, rgba(255, 255, 255, 0.01) 0px, rgba(255, 255, 255, 0.01) 1px, transparent 1px, transparent 100px);
   background-attachment: fixed;
   color: var(--text-main);
   line-height: 1.8;
   letter-spacing: 0.02em;
   overflow-x: hidden;
-  transition: background-color 0.5s ease;
+  transition: background-color 0.8s ease;
 }
 
 h1,
@@ -98,16 +120,48 @@ ul {
   list-style: none;
 }
 
-/* Glassmorphism Utility */
-/* Glassmorphism Utility */
+/* Water Droplet Glassmorphism Style */
 .glass {
-  background: var(--glass);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
+  background: var(--glass) !important;
+  backdrop-filter: blur(28px) saturate(220%);
+  -webkit-backdrop-filter: blur(28px) saturate(220%);
   border: 1px solid var(--glass-border);
-  border-top: 1px solid var(--glass-highlight);
-  border-left: 1px solid var(--glass-highlight);
-  box-shadow: var(--shadow-glass);
+  box-shadow:
+    var(--shadow-glass),
+    inset 0 30px 30px -15px rgba(255, 255, 255, 0.15),
+    /* Top Inner Highlight */
+    inset 0 -15px 30px -10px rgba(0, 0, 0, 0.4);
+  /* Bottom Inner Shadow */
+  position: relative;
+}
+
+/* Droplet Specular Reflection */
+.glass::after {
+  content: '';
+  position: absolute;
+  top: 10px;
+  left: 20px;
+  width: 25%;
+  height: 15%;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.6), transparent);
+  filter: blur(10px);
+  border-radius: 50%;
+  transform: rotate(-20deg);
+  pointer-events: none;
+}
+
+/* Add a bright inner glow at the bottom */
+.glass::before {
+  content: '';
+  position: absolute;
+  bottom: 5px;
+  left: 10%;
+  width: 80%;
+  height: 20%;
+  background: radial-gradient(ellipse at bottom, rgba(255, 255, 255, 0.2), transparent);
+  filter: blur(5px);
+  pointer-events: none;
+  z-index: -1;
 }
 
 /* Navbar */
@@ -126,8 +180,8 @@ nav {
 
 nav.scrolled {
   padding: 1rem 2rem;
-  background: rgba(5, 46, 22, 0.8);
-  /* Darker glass for nav readability */
+  background: rgba(2, 44, 34, 0.85);
+  /* Consistent deep emerald */
   backdrop-filter: blur(20px);
   border-bottom: 1px solid var(--glass-border);
   box-shadow: var(--shadow-sm);
@@ -250,9 +304,11 @@ nav.scrolled {
 }
 
 .btn-primary {
-  background: var(--accent-dark);
-  color: white;
+  background: linear-gradient(135deg, var(--accent), var(--accent-dark));
+  color: #064e3b;
+  /* Deep green text on light emerald btn */
   box-shadow: 0 4px 15px var(--accent-glow);
+  border: none;
 }
 
 .btn-primary:hover {
@@ -271,31 +327,47 @@ nav.scrolled {
   margin: 0 auto;
 }
 
-/* Base Bento Item */
+/* Base Bento Item - Droplet Form */
 .bento-item {
-  border-radius: 28px;
+  border-radius: 40px;
+  /* More rounded like a water drop */
   overflow: hidden;
   position: relative;
-  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: var(--transition);
   display: flex;
   flex-direction: column;
-  background: var(--bg-subtle);
+  background: var(--glass);
+  /* Use transparent glass by default */
+  animation: float 10s ease-in-out infinite;
 }
 
-.bento-item.glass {
-  background: var(--glass);
-  backdrop-filter: blur(24px);
-  -webkit-backdrop-filter: blur(24px);
-  border: 1px solid var(--glass-border);
-  border-top: 1px solid var(--glass-highlight);
-  border-left: 1px solid var(--glass-highlight);
-  box-shadow: var(--shadow-glass);
+.bento-item:nth-child(even) {
+  animation-delay: -5s;
+  animation-duration: 12s;
 }
 
 .bento-item:hover {
-  transform: translateY(-8px) scale(1.01);
-  box-shadow: 0 20px 40px -10px rgba(15, 23, 42, 0.15);
-  border-color: var(--accent);
+  transform: translateY(-12px) scale(1.02);
+  box-shadow: 0 40px 80px -20px rgba(0, 0, 0, 0.5);
+  border-color: rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.08);
+  /* Slight gloss on hover */
+}
+
+@keyframes float {
+
+  0%,
+  100% {
+    transform: translateY(0) rotate(0);
+  }
+
+  33% {
+    transform: translateY(-8px) rotate(0.2deg);
+  }
+
+  66% {
+    transform: translateY(-4px) rotate(-0.2deg);
+  }
 }
 
 .bento-header {
@@ -367,10 +439,10 @@ section {
 
 /* Internal Cards */
 .card {
-  border-radius: 20px;
-  background: rgba(0, 0, 0, 0.2);
-  /* Dark Glass */
-  backdrop-filter: blur(12px);
+  border-radius: 30px;
+  background: rgba(255, 255, 255, 0.01);
+  /* Pure water film */
+  backdrop-filter: blur(20px) saturate(150%);
   border: 1px solid var(--glass-border);
   padding: 1.5rem;
   transition: var(--transition);
@@ -513,17 +585,21 @@ section {
 .member-img {
   width: 180px;
   height: 180px;
-  border-radius: 50%;
+  border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+  /* Organic droplet shape */
   background: rgba(255, 255, 255, 0.05);
   margin: 0 auto 1.5rem;
   overflow: hidden;
   border: 4px solid var(--glass-border);
   transition: var(--transition);
+  position: relative;
+  box-shadow: inset 5px 5px 15px rgba(255, 255, 255, 0.2);
 }
 
 .team-member:hover .member-img {
   border-color: var(--accent);
-  transform: scale(1.05);
+  transform: scale(1.05) rotate(2deg);
+  border-radius: 50%;
 }
 
 
@@ -562,10 +638,11 @@ section {
 
 /* Footer Improvements */
 footer {
-  background: var(--primary);
+  background: #022c22;
   color: white;
   padding: 6rem 2rem;
   margin-top: 4rem;
+  border-top: 1px solid var(--glass-border);
 }
 
 .footer-content {
