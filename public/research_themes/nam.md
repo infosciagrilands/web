@@ -6,4 +6,4 @@ Nested Association Mapping (NAM) は、複雑な農業形質の遺伝背景を�
 
 ![SubImage](./nam2_small.jpg)
 
-[論文](https://doi.org/10.3390/plants10061255)
+[Kitony et al. 2021](https://doi.org/10.3390/plants10061255)

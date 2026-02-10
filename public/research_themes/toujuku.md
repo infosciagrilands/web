@@ -4,5 +4,5 @@
 
 多収を狙ってイネの穂を大きくすると、「実のつまり」が悪くなります。このイネの登熟に関する有用遺伝子を探索しています。
 
-[文献](https://www.mdpi.com/2223-7747/13/2/289)
-[文献](https://doi.org/10.1270/jsbbs.18203)
+[Mabreja et al. 2024](https://www.mdpi.com/2223-7747/13/2/289)
+[Phung et al. 2019](https://doi.org/10.1270/jsbbs.18203)
