@@ -344,11 +344,6 @@ nav.scrolled {
   grid-column: span 12;
 }
 
-#gallery-tile {
-  grid-column: span 12;
-  grid-row: span 3;
-}
-
 #qa-tile {
   grid-column: span 5;
 }
@@ -531,53 +526,6 @@ section {
   transform: scale(1.05);
 }
 
-/* Gallery Layout */
-.gallery-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  gap: 2rem;
-  margin-top: 2rem;
-}
-
-.gallery-item {
-  position: relative;
-  border-radius: 24px;
-  overflow: hidden;
-  height: 400px;
-  cursor: pointer;
-  transition: var(--transition);
-}
-
-.gallery-item img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.6s ease;
-}
-
-.gallery-item:hover img {
-  transform: scale(1.1);
-}
-
-.gallery-caption {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  padding: 2rem;
-  background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
-  color: white;
-  font-weight: 600;
-  font-size: 1.1rem;
-  opacity: 0;
-  transform: translateY(20px);
-  transition: var(--transition);
-}
-
-.gallery-item:hover .gallery-caption {
-  opacity: 1;
-  transform: translateY(0);
-}
 
 /* Q&A section */
 .qa-list {
