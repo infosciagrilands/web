@@ -15,16 +15,15 @@
   --bg-main: #052e16;
   --bg-subtle: #064020;
 
-  /* REAL WATER DROPLET GLASS VARIABLES - Ultra Transparent */
-  --glass: rgba(255, 255, 255, 0.02);
-  /* Optimized at 2% */
-  --glass-border: rgba(255, 255, 255, 0.4);
-  --glass-highlight: rgba(255, 255, 255, 0.6);
+  /* REAL WATER DROPLET GLASS VARIABLES - Subtle & Clear */
+  --glass: rgba(255, 255, 255, 0.01);
+  --glass-border: rgba(255, 255, 255, 0.15);
+  /* Toned down */
+  --glass-highlight: rgba(255, 255, 255, 0.3);
+  /* Toned down */
   --shadow-glass:
-    0 20px 50px -10px rgba(0, 0, 0, 0.7),
-    0 0 15px rgba(255, 255, 255, 0.1),
-    /* Light glow */
-    inset 0 1px 2px rgba(255, 255, 255, 0.3);
+    0 15px 45px -10px rgba(0, 0, 0, 0.6),
+    inset 0 1px 1px rgba(255, 255, 255, 0.15);
 
   --shadow-sm: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
   --shadow-md: 0 10px 15px -3px rgba(0, 0, 0, 0.2);
@@ -108,9 +107,10 @@ ul {
   border: 1px solid var(--glass-border);
   box-shadow:
     var(--shadow-glass),
-    inset 0 30px 30px -15px rgba(255, 255, 255, 0.2),
-    /* Top Inner Highlight */
-    inset 0 -15px 30px -10px rgba(0, 0, 0, 0.4);
+    inset 0 20px 20px -10px rgba(255, 255, 255, 0.1),
+    /* Toned down highlight */
+    inset 0 -10px 20px -5px rgba(0, 0, 0, 0.3);
+  /* Toned down shadow */
   /* Bottom Inner Shadow */
   position: relative;
 }
@@ -123,7 +123,8 @@ ul {
   left: 30px;
   width: 25%;
   height: 15%;
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.6), transparent);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.3), transparent);
+  /* Toned down brightness */
   filter: blur(10px);
   border-radius: 50%;
   transform: rotate(-15deg);
