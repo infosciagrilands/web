@@ -12,6 +12,7 @@
     href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Noto+Sans+JP:wght@300;400;700&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="./src/style.css">
+  <script type="module" src="https://cdn.jsdelivr.net/npm/bsky-embed/dist/bsky-embed.es.js" async></script>
 </head>
 
 <body>
@@ -80,34 +81,13 @@
       </div>
     </section>
 
-    <!-- News & Updates Tile -->
+    <!-- News & Updates Tile (Bluesky) -->
     <section id="news-tile" class="bento-item glass reveal">
       <div class="bento-header">
-        <h2>News & Updates</h2>
+        <h2>Bluesky Feed</h2>
       </div>
-      <div class="bento-body" style="display: flex; flex-direction: column; justify-content: space-between; gap: 1rem;">
-        <div class="news-list" style="overflow-y: auto; flex-grow: 1;">
-          <div class="news-item"
-            style="margin-bottom: 1.2rem; padding-bottom: 0.8rem; border-bottom: 1px solid var(--glass-border);">
-            <span style="font-size: 0.8rem; color: var(--accent); font-weight: 600;">2026.02.10</span>
-            <p style="font-size: 0.85rem; margin-top: 0.3rem; line-height: 1.5;">ウェブサイトを更新し、Research Themesの詳細表示を改善しました。
-            </p>
-          </div>
-          <div class="news-item"
-            style="margin-bottom: 1.2rem; padding-bottom: 0.8rem; border-bottom: 1px solid var(--glass-border);">
-            <span style="font-size: 0.8rem; color: var(--accent); font-weight: 600;">2026.02.01</span>
-            <p style="font-size: 0.85rem; margin-top: 0.3rem; line-height: 1.5;">
-              耕地情報利用研究室の公式X（旧Twitter）で日々の研究風景を発信しています。</p>
-          </div>
-        </div>
-        <a href="https://twitter.com/infosciagriland" target="_blank" class="profile-link-badge"
-          style="text-align: center; padding: 0.8rem; display: flex; align-items: center; justify-content: center; gap: 0.6rem; background: rgba(255,255,255,0.05); border-radius: 12px; transition: all 0.3s ease; text-decoration: none;">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
-            <path
-              d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.25h-6.657l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.045 4.126H5.078z" />
-          </svg>
-          <span style="font-size: 0.85rem; font-weight: 600;">公式Xで最新情報を見る</span>
-        </a>
+      <div class="bento-body" style="padding: 0; overflow-y: auto;">
+        <bsky-embed username="infosciagrilands.bsky.social" mode="dark" limit="5" link-target="_blank"></bsky-embed>
       </div>
     </section>
 
