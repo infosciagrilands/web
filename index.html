@@ -116,8 +116,9 @@
       <div class="bento-header">
         <h2>Bluesky Feed</h2>
       </div>
-      <div class="bento-body" style="padding: 0; overflow-y: auto;">
-        <bsky-embed username="infosciagrilands.bsky.social" mode="dark" limit="5" link-target="_blank"></bsky-embed>
+      <div class="bento-body" style="padding: 0; overflow-y: auto; max-height: 500px; scrollbar-width: thin;">
+        <bsky-embed username="infosciagrilands.bsky.social" mode="dark" limit="10" load-more="true"
+          link-target="_blank"></bsky-embed>
       </div>
     </section>
 
