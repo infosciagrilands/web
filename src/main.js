@@ -138,7 +138,7 @@ const researchThemes = [
     id: 'research-modal-10',
     title: 'Genotyping by sequencing',
     desc: '大量サンプル（>2000）を低コストで解析する。',
-    img: `${BASE_URL}research_themes/gbs.png`,
+    img: `${BASE_URL}research_themes/gbs.jpg`,
     mdFile: `${BASE_URL}research_themes/gbs.md`
   }
 ];
