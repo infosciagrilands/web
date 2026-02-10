@@ -133,6 +133,13 @@ const researchThemes = [
     desc: '名古屋大学発の「世界の稲作をよくする」プロジェクトへの参画。',
     img: `${BASE_URL}research_themes/wish.jpg`,
     mdFile: `${BASE_URL}research_themes/wish.md`
+  },
+  {
+    id: 'research-modal-10',
+    title: 'GBS（解析受託・共同研究）',
+    desc: '大量サンプル（>2000）を低コストで解析する、独自解析パイプラインの運用。',
+    img: `${BASE_URL}research_themes/gbs.png`,
+    mdFile: `${BASE_URL}research_themes/gbs.md`
   }
 ];
 
